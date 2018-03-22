@@ -1,0 +1,10 @@
+{
+  "variables" : {
+    "draft"   : "yes",
+    "title"   : "Security Enhancement to Mitigate Buffer Overflow in UEFI",
+    "version" : "Revision 02.0"
+  },
+
+  "plugins": ["puml"],
+  "pluginsConfig": {}
+}
