@@ -30,6 +30,6 @@
 -->
 ## Enable DEP in EDKII {#enable-dep-in-edkii}
 
-In [MemProtection], we discussed the how to enable DEP for stack, heap, and PE image in DXE and System Management Mode (SMM) environment.
+In the white paper,  [A Tour Beyond BIOS- Memory Protection in UEFI BIOS](/ https://www.gitbook.com/book/edk2-docs/a-tour-beyond-bios-memory-protection-in-uefi-bios/details ), we discussed the how to enable DEP for stack, heap, and PE image in Driver eXecution Environment (DXE) and System Management Mode (SMM) environment.
 
-We support Non-Executable stack, ReadOnly PE image code, Non-Executable PE image data.
+We support Non-Executable stack, ReadOnly Portable Executable (PE) image code, Non-Executable PE image data.

@@ -30,8 +30,8 @@
 -->
 ## Future work {#future-work}
 
-As discussed in [MemMap], there are some limitations if one wants to enable an entire DEP environment in UEFI pre-boot environment. If the limitation is eliminated in the future, we may configure a DEP environment in the pre-boot environment.
+As discussed in the white paper, [A Tour Beyond BIOS Memory Map And Practices in UEFI BIOS](https://github.com/tianocore-docs/Docs/raw/master/White_Papers/A_Tour_Beyond_BIOS_Memory_Map_And_Practices_in_UEFI_BIOS_V2.pdf), there are some limitations if one wants to enable an entire DEP environment in UEFI pre-boot environment. If the limitation is eliminated in the future, we may configure a DEP environment in the pre-boot environment.
 
 ### Summary {#summary}
 
-This section introduces the data execution protection and how to enable it in EDKII. For more details, please refer to [MemMap], where we have provided a detailed discussion before.
+This section introduces the data execution protection and how to enable it in EDK II. For more details, please refer to the white paper [A Tour Beyond BIOS Memory Map And Practices in UEFI BIOS](https://github.com/tianocore-docs/Docs/raw/master/White_Papers/A_Tour_Beyond_BIOS_Memory_Map_And_Practices_in_UEFI_BIOS_V2.pdf), where we have provided a detailed discussion before.

@@ -30,4 +30,4 @@
 -->
 ## DEP in UEFI specification {#dep-in-uefi-specification}
 
-[UEFI] specification allows “Stack may be marked as non-executable in identity mapped page tables.” UEFI also defines **EFI_MEMORY_ATTRIBUTES_TABLE** to let the OS know which addresses represent runtime code pages and runtime data pages, respectively. As such, the OS may refer to this information in order to setup the protection during OS runtime. The details of this design are discussed in [MemMap].
+The Unified Extensible Firmware Interface (UEFI) [[www.uefi.org](http://uefi.org)] specification allows “Stack may be marked as non-executable in identity mapped page tables.” UEFI also defines `EFI_MEMORY_ATTRIBUTES_TABLE` to let the OS know which addresses represent runtime code pages and runtime data pages, respectively. As such, the OS may refer to this information in order to setup the protection during OS runtime. The details of this design are discussed in the white paper, [A Tour Beyond BIOS Memory Map And Practices in UEFI BIOS ](https://github.com/tianocore-docs/Docs/raw/master/White_Papers/A_Tour_Beyond_BIOS_Memory_Map_And_Practices_in_UEFI_BIOS_V2.pdf).
