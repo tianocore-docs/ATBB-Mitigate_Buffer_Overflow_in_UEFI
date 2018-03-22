@@ -93,7 +93,8 @@ gEfiMdeModulePkgTokenSpaceGuid.PcdHeapGuardPageType
   #  OEM Reserved                      0x4000000000000000<BR>
   #  OS Reserved                       0x8000000000000000<BR>
   # e.g. LoaderCode+LoaderData+BootServicesCode+BootServicesData are needed, 0x1E should be used.<BR>
-
+```
+```
 gEfiMdeModulePkgTokenSpaceGuid.PcdHeapGuardPoolType
   ## Indicates which type allocation need guard page.
   #
@@ -198,17 +199,93 @@ gEfiMdeModulePkgTokenSpaceGuid.PcdSetNxForStack
   #  IA32 PAE is supported and Execute Disable Bit is available.<BR>
   #   TRUE  - to set NX for stack.<BR>
   #   FALSE - Not to set NX for stack.<BR>
+  
 ```
+
 
 ### DXE NX/RO Protection: _Prevent code injection_ {#dxe-nx-ro-protection-prevent-code-injection}
 
+```
+gEfiMdeModulePkgTokenSpaceGuid.PcdDxeNxMemoryProtectionPolicy
+  ## Set DXE memory protection policy. The policy is bitwise.
+  #  If a bit is set, memory regions of the associated type will be mapped
+  #  non-executable.<BR><BR>
+  #
+  # Below is bit mask for this PCD: (Order is same as UEFI spec)<BR>
+  #  EfiReservedMemoryType          0x0001<BR>
+  #  EfiLoaderCode                  0x0002<BR>
+  #  EfiLoaderData                  0x0004<BR>
+  #  EfiBootServicesCode            0x0008<BR>
+  #  EfiBootServicesData            0x0010<BR>
+  #  EfiRuntimeServicesCode         0x0020<BR>
+  #  EfiRuntimeServicesData         0x0040<BR>
+  #  EfiConventionalMemory          0x0080<BR>
+  #  EfiUnusableMemory              0x0100<BR>
+  #  EfiACPIReclaimMemory           0x0200<BR>
+  #  EfiACPIMemoryNVS               0x0400<BR>
+  #  EfiMemoryMappedIO              0x0800<BR>
+  #  EfiMemoryMappedIOPortSpace     0x1000<BR>
+  #  EfiPalCode                     0x2000<BR>
+  #  EfiPersistentMemory            0x4000<BR>
+  #  OEM Reserved       0x4000000000000000<BR>
+  #  OS Reserved        0x8000000000000000<BR>
+  #
+  # NOTE: User must NOT set NX protection for EfiLoaderCode / EfiBootServicesCode / EfiRuntimeServicesCode. <BR>
+  #       User MUST set the same NX protection for EfiBootServicesData and EfiConventionalMemory. <BR>
+  #
+  # e.g. 0x7FD5 can be used for all memory except Code. <BR>
+  # e.g. 0x7BD4 can be used for all memory except Code and ACPINVS/Reserved. <BR>
 
+```
 
 
 ### DXE image Protection: _Prevent code injection_ {#dxe-image-protection-prevent-code-injection}
 
+```
+gEfiMdeModulePkgTokenSpaceGuid.PcdImageProtectionPolicy
+  ## Set image protection policy. The policy is bitwise.
+  #  If a bit is set, the image will be protected by DxeCore if it is aligned.
+  #   The code section becomes read-only, and the data section becomes non-executable.
+  #  If a bit is clear, the image will not be protected.<BR><BR>
+  #    BIT0       - Image from unknown device. <BR>
+  #    BIT1       - Image from firmware volume.<BR>
 
+
+```
 
 ### SMM static paging: _Provide code injection in SMM_ {#smm-static-paging-provide-code-injection-in-smm}
 
+
+```
+
+gUefiCpuPkgTokenSpaceGuid.PcdCpuSmmStaticPageTable
+  ## Indicates if SMM uses static page table.
+  #  If enabled, SMM will not use on-demand paging. SMM will build static page table for all memory.
+  #  This flag only impacts X64 build, because SMM always builds static page table for IA32.
+  #  It could not be enabled at the same time with SMM profile feature (PcdCpuSmmProfileEnable).
+  #  It could not be enabled also at the same time with heap guard feature for SMM
+  #  (PcdHeapGuardPropertyMask in MdeModulePkg).<BR><BR>
+  #   TRUE  - SMM uses static page table for all memory.<BR>
+  #   FALSE - SMM uses static page table for below 4G memory and use on-demand paging for above 4G memory.<BR>
+
+
+```
+
+
 ### SMI Handler Profile: _Provide SMI handler information_ {#smi-handler-profile-provide-smi-handler-information}
+
+```
+gEfiMdeModulePkgTokenSpaceGuid.PcdSmiHandlerProfilePropertyMask
+  ## The mask is used to control SmiHandlerProfile behavior.<BR><BR>
+  #  BIT0 - Enable SmiHandlerProfile.<BR>
+
+```
+
+
+### SMM Profile: _Provide non-SMRAM access in SMM_ {#smm-profile-provide-non-smram-access-in-smm}
+
+```
+gUefiCpuPkgTokenSpaceGuid.PcdCpuSmmProfileEnable
+  ## Indicates if SMM Profile will be enabled.
+
+```
