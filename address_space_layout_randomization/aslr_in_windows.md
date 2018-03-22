@@ -28,22 +28,32 @@
   ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 -->
-## ASLR in Windows {#aslr-in-windows}
+## Address Sace Layout Randomization (ASLR) in Windows {#aslr-in-windows}
 
-Windows supports ASLR. [WindowsInternal] desribes the detail on how executable images, DLL, stack, heap are randomized.
+Windows supports Address Sace Layout Randomization (ASLR). [[WindowsInternal](https://www.amazon.com/Windows-Internals-Part-Developer-Reference/dp/0735648735 )] <sup>[[1]](#footnote1)</sup>  desribes the detail on how executable images, DLL, stack, heap are randomized.
 
-![](Mydir/media/image4.png)
+![](/media/image4.png)
 
-Figure 3-1 Windows OS space layout, source: [WindowsInternal]
+###### Figure 3-1 Windows OS space layout, source: [[WindowsInternal](https://www.amazon.com/Windows-Internals-Part-Developer-Reference/dp/0735648735 )] <sup>[[1]](#footnote1)</sup>
 
-[ASLR1] shows the Windows8 HE-ASLR design and entropy number.
+[[ASLR1](http://media.blackhat.com/bh-us-12/Briefings/M_Miller/BH_US_12_Miller_Exploit_Mitigation_Slides.pdf)]<sup>[[2]](#footnote2)</sup> shows the Windows8 HE-ASLR design and entropy number.
 
-![](Mydir/media/image5.png)
+![](/media/image5.png)
 
-Figure 3-2 Win8 HE-ASLR, source: [ASLR1]
+###### Figure 3-2 Win8 HE-ASLR, source: [[ASLR1](http://media.blackhat.com/bh-us-12/Briefings/M_Miller/BH_US_12_Miller_Exploit_Mitigation_Slides.pdf)]<sup>[[2]](#footnote2)</sup>
 
-[ASLR2] shows different image layouts during boot.
+[[ASLR2](http://blogs.msdn.com/b/ie/archive/2012/03/12/enhanced-memory-protections-in-ie10.aspx)]<sup>[[3]](#footnote3)</sup> shows different image layouts during boot.
 
-![Diagram showing how the physical memory location of various system DLLs changes between a first and second boot.](Mydir/media/image6.png)
+The following Diagram showing how the physical memory location of various system DLLs changes between a first and second boot
 
-Figure 3-3 Image layout during boot, source: [ASLR2]
+![](/media/image6.png)
+
+###### Figure 3-3 Image layout during boot, source: [[ASLR2](http://blogs.msdn.com/b/ie/archive/2012/03/12/enhanced-memory-protections-in-ie10.aspx)]<sup>[[3]](#footnote3)</sup>
+
+
+<a name="footnote1">[1]</a> [[WindowsInternal](https://www.amazon.com/Windows-Internals-Part-Developer-Reference/dp/0735648735 )] Windows Internals, 6th edition, Mark E. Russinovich, David A. Solomon, Alex Ionescu, 2012, Microsoft Press. ISBN-13: 978-0735648739/978-0735665873
+
+<a name="footnote2">[2]</a>[[ASLR1](http://media.blackhat.com/bh-us-12/Briefings/M_Miller/BH_US_12_Miller_Exploit_Mitigation_Slides.pdf)] Exploit Mitigation Improvements in Windows 8, Ken Johnson, Ma, Miller
+
+<a name="footnote3">[3]</a>[[ASLR2](http://blogs.msdn.com/b/ie/archive/2012/03/12/enhanced-memory-protections-in-ie10.aspx)] Enhance Memory Protections in IE10
+
