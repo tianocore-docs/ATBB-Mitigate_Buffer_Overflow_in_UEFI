@@ -253,7 +253,7 @@ gEfiMdeModulePkgTokenSpaceGuid.PcdImageProtectionPolicy
 
 ```
 
-### SMM static paging: _Provide code injection in SMM_ {#smm-static-paging-provide-code-injection-in-smm}
+### System Management Mode (SMM) static paging: _Provide code injection in SMM_ {#smm-static-paging-provide-code-injection-in-smm}
 
 
 ```
@@ -272,7 +272,7 @@ gUefiCpuPkgTokenSpaceGuid.PcdCpuSmmStaticPageTable
 ```
 
 
-### SMI Handler Profile: _Provide SMI handler information_ {#smi-handler-profile-provide-smi-handler-information}
+### System Management Mode Interrupt (SMI) Handler Profile: _Provide SMI handler information_ {#smi-handler-profile-provide-smi-handler-information}
 
 ```
 gEfiMdeModulePkgTokenSpaceGuid.PcdSmiHandlerProfilePropertyMask

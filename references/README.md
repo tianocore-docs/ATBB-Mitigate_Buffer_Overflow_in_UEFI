@@ -30,3 +30,6 @@
 -->
 
 # _References_ {#references}
+
+
+The references are categorized by the sections in which they appear.
