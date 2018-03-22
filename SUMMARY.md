@@ -1,6 +1,7 @@
 # Summary
 
 * [ATBB -  Mitigate Buffer Overflow in UEFI](README.md)
+  * [Executive Summary](executive-summary.md)
 * [Stack Canaries](stack_canaries/README.md)
   * [Stack Check Support in Microsoft Visual Studio](stack_canaries/stack_check_support_in_microsoft_visual_studio.md)
   * [Stack Check Support in GCC](stack_canaries/stack_check_support_in_gcc.md)
@@ -13,7 +14,7 @@
   * [Future work](data_execution_protection/future_work.md)
 * [Address Space Layout Randomization](address_space_layout_randomization/README.md)
   * [ASLR in Windows](address_space_layout_randomization/aslr_in_windows.md)
-  * [ASLR in *nix](address_space_layout_randomization/aslr_in_nix.md)
+  * [ASLR in \*nix](address_space_layout_randomization/aslr_in_nix.md)
   * [ASLR requirement in UEFI firmware](address_space_layout_randomization/aslr_requirement_in_uefi_firmware.md)
   * [Enable ASLR for UEFI in EDKII](address_space_layout_randomization/enable_aslr_for_uefi_in_edkii.md)
   * [Enable ASLR for SMM in EDKII](address_space_layout_randomization/enable_aslr_for_smm_in_edkii.md)
@@ -21,8 +22,8 @@
 * [Additional Overflow Detection](additional_overflow_detection/README.md)
   * [Stack Overflow Detection](additional_overflow_detection/stack_overflow_detection.md)
   * [Heap Management in EDKII](additional_overflow_detection/heap_management_in_edkii.md)
-  * [Heap Overflow Detection (for Page)](additional_overflow_detection/heap_overflow_detection_for_page.md)
-  * [Heap Overflow Detection (for Pool)](additional_overflow_detection/heap_overflow_detection_for_pool.md)
+  * [Heap Overflow Detection \(for Page\)](additional_overflow_detection/heap_overflow_detection_for_page.md)
+  * [Heap Overflow Detection \(for Pool\)](additional_overflow_detection/heap_overflow_detection_for_pool.md)
   * [NULL Pointer Protection in EDKII](additional_overflow_detection/null_pointer_protection_in_edkii.md)
   * [Read-only page table](additional_overflow_detection/read-only_page_table.md)
   * [Limitation](additional_overflow_detection/limitation.md)
@@ -37,3 +38,4 @@
   * [Data Execution Protection](references/data_execution_protection.md)
   * [Address Space Randomization](references/address_space_randomization.md)
   * [Additional Overflow Detection](references/additional_overflow_detection.md)
+

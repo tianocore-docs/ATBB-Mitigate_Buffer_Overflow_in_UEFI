@@ -1,5 +1,5 @@
 <!--- @file
-  README.md for References
+  Executive Summary
 
   Copyright (c) 2018, Intel Corporation. All rights reserved.<BR>
 
@@ -28,5 +28,7 @@
   ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 -->
+**Introduction**
+A buffer overflow is “one of the most important exploitation techniques in the history of computer security.” [Tanenbaum] “Buffer overflows are ideally suited for introducing three of the most important protection mechanisms available in most modern systems: stack canaries, data execution protection, and address-space layout randomization.” [Tanenbaum] However, the current UEFI firmware implementation only adopted a few of these mechanisms. This paper will introduce how to enable the protection mechanisms in UEFI firmware to harden the pre-boot phase.
 
-# _References_ {#references}
+
