@@ -28,7 +28,7 @@
   ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 -->
-## Enable ASLR for SMM in EDKII {#enable-aslr-for-smm-in-edkii}
+## Enable ASLR for SMM in EDK II {#enable-aslr-for-smm-in-edkii}
 
 System Management Mode (SMM) is a resource constrained environment.
 
@@ -58,6 +58,6 @@ System Management Mode (SMM) is a resource constrained environment.
 
     SMM is considered as an isolated and secure execution environment. We randomize the component in SMM to prevent attacks. However, if the randomized information is exposed, it is considered as an information leak.
 
-    In the current EDKII, the SmmCore installs an EFI_LOADED_IMAGE_PROTOCOL into DXE protocol database for each SMM images. This EFI_LOADED_IMAGE_PROTOCOL contains the SMM image base and size information. This is a typical SMM information leak and make SMM image randomization useless.
+    In the current EDK II, the SmmCore installs an EFI_LOADED_IMAGE_PROTOCOL into DXE protocol database for each SMM images. This EFI_LOADED_IMAGE_PROTOCOL contains the SMM image base and size information. This is a typical SMM information leak and make SMM image randomization useless.
 
     In order to mitigate this, SmmLoadImage() ([https://github.com/jyao1/SecurityEx/blob/master/AslrPkg/Override/MdeModulePkg/Core/PiSmmCore/Dispatcher.c](https://github.com/jyao1/SecurityEx/blob/master/AslrPkg/Override/MdeModulePkg/Core/PiSmmCore/Dispatcher.c)) installs the EFI_LOADED_IMAGE_PROTOCOL into SMM protocol database to make SMM information self-contained.

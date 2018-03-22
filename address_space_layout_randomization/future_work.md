@@ -36,4 +36,4 @@ Current AslrPkg just selects some important components for randomization as a sa
 
 ### Summary {#summary}
 
-This section introduces the address space layout randomization technique and how to enable different randomization features in EDKII.
+This section introduces the address space layout randomization technique and how to enable different randomization features in EDK II.

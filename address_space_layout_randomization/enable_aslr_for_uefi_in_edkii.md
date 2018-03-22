@@ -1,5 +1,5 @@
 <!--- @file
- Address Space Layout Randomization file: Enable ASLR for UEFI in EDKII
+ Address Space Layout Randomization file: Enable ASLR for UEFI in EDK II
 
   Copyright (c) 2018, Intel Corporation. All rights reserved.<BR>
 
@@ -28,7 +28,7 @@
   ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 -->
-## Enable ASLR for UEFI in EDKII {#enable-aslr-for-uefi-in-edkii}
+## Enable ASLR for UEFI in EDK II {#enable-aslr-for-uefi-in-edkii}
 
 In order to enable address space layout randomization, we provide a sample implementation for randomization in UEFI.
 
