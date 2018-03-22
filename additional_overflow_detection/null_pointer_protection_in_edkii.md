@@ -29,7 +29,7 @@
 
 -->
 
-## NULL Pointer Protection in EDKII {#null-pointer-protection-in-edkii}
+## NULL Pointer Protection in EDK II {#null-pointer-protection-in-edkii}
 
 Zero address is considered as an invalid address in most programs. However, in x86 systems, the zero address is valid address in legacy BIOS because the 16bit interrupt vector table (IVT) is at address zero. In current UEFI firmware, zero address is always mapped.
 

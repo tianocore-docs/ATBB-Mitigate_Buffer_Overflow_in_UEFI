@@ -33,7 +33,7 @@
 
 Heap overflow is a big problem. [WindowsHeap] discussed some machenism to detect heap overflow.
 
-In EDKII, we may setup a guard page around the allocated pages. The concept is similar to the guard page for stack. The gEfiMdeModulePkgTokenSpaceGuid.PcdHeapGuardPageType indicates which type page allocation need guard page. The gEfiMdeModulePkgTokenSpaceGuid.PcdHeapGuardPoolType indicates which type pool allocation need guard page. The gEfiMdeModulePkgTokenSpaceGuid.PcdHeapGuardPropertyMask is a mask to control Heap Guard behavior. All these PCDs are defined in [https://github.com/tianocore/edk2/blob/master/MdeModulePkg/MdeModulePkg.dec](https://github.com/tianocore/edk2/blob/master/MdeModulePkg/MdeModulePkg.dec).
+In EDK II, we may setup a guard page around the allocated pages. The concept is similar to the guard page for stack. The gEfiMdeModulePkgTokenSpaceGuid.PcdHeapGuardPageType indicates which type page allocation need guard page. The gEfiMdeModulePkgTokenSpaceGuid.PcdHeapGuardPoolType indicates which type pool allocation need guard page. The gEfiMdeModulePkgTokenSpaceGuid.PcdHeapGuardPropertyMask is a mask to control Heap Guard behavior. All these PCDs are defined in [https://github.com/tianocore/edk2/blob/master/MdeModulePkg/MdeModulePkg.dec](https://github.com/tianocore/edk2/blob/master/MdeModulePkg/MdeModulePkg.dec).
 
 If heap guard for page allocation is enabled, whenever there is an AllocatePage() request, the core allocates 2 more pages. One page is before the allocated pages and the other is after. Both are set be NOT PRESENT in the page table. If the overflow happens, the page fault exception is triggered immediately. See figure 4-7.
 

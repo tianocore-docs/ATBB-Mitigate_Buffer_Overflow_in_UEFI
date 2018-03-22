@@ -1,5 +1,5 @@
 <!--- @file
-  Additional Overflow Detection file: -Heap Management in EDKII
+  Additional Overflow Detection file: -Heap Management in EDK II
 
   Copyright (c) 2018, Intel Corporation. All rights reserved.<BR>
 
@@ -29,7 +29,7 @@
 
 -->
 
-## Heap Management in EDKII {#heap-management-in-edkii}
+## Heap Management in EDK II {#heap-management-in-edkii}
 
 In UEFI, the DxeCore maintains the heap usage. The UEFI driver or application may call AllocatePages/FreePages/AllocatePool/FreePool to allocate or free the resource, or call GetMemoryMap() to review all of the memory usage.
 

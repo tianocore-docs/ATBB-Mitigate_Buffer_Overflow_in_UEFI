@@ -47,4 +47,4 @@ Intel MPX may also be considered to add to a UEFI firmware to help catch the hea
 
 ### Summary {#summary}
 
-This section discussed some other mechanism which can be used to detect stack overflow or heap overflow in EDKII.
+This section discussed some other mechanism which can be used to detect stack overflow or heap overflow in EDK II.
