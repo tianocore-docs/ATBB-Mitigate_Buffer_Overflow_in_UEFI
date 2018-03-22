@@ -85,7 +85,7 @@ Copyright (c) 2018, Intel Corporation. All rights reserved.
 | Revision | Revision History | Date |
 | ---------- | ------------------ | ----------- |
 | 01.0 | Initial release. | Oct 2016 |
-| 02.0 | Added enable special pool feature, how does it work, how to debug, etc…., <BR>Convert to Gitbook | March 2018 |
+| 02.0 | Added: enabling of a special pool feature, how does it work, how to debug, etc…., <BR>Convert to Gitbook | March 2018 |
 
 
 <!--- end of README.md
