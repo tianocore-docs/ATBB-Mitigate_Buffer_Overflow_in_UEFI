@@ -32,7 +32,6 @@
 ## Data Execution Protection {#data-execution-protection}
 
 [UEFI] Unified Extensible Firmware Interface (UEFI) Specification, Version 2.6
-
 [www.uefi.org](http://www.uefi.org)
 
 [IA32SDM] _Intel® 64 and IA-32 Architectures Software Developer’s Manual_, [www.intel.com](http://www.intel.com)
