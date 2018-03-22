@@ -31,6 +31,12 @@
 
 ## Stack Check Support in GCC {#stack-check-support-in-gcc}
 
-The first stack guard is supported in GCC. Current GCC supports:  -fstack-protector, -fstack-protector-all, and -fstack-protector-strong. [StackCanaries].
+The first stack guard is supported in GCC. Current GCC supports:  -fstack-protector, -fstack-protector-all, and -fstack-protector-strong.[StackCanaries] <sup>[[1]](#footnote1)</sup>   .
 
--fstack-protector-strong is recommended because “this option tries to hit the balance between an over-simplified version and an over-killing protection schema”. [GCC]
+-fstack-protector-strong is recommended because “this option tries to hit the balance between an over-simplified version and an over-killing protection schema”. [GCC]<sup>[[2]](#footnote2)</sup>  
+
+
+<a name="footnote1">[1]</a> [[StackCanaries](http://en.wikipedia.org/wiki/Buffer_overflow_protection)]
+<a name="footnote2">[2]</a> [[GCC](https://docs.google.com/document/d/1xXBH6rRZue4f296vGt9YQcuLVQHeE516stHwt8)]
+
+

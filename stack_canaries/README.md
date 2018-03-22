@@ -32,16 +32,16 @@
 
 One of the most important buffer overflow attacks is the first Internet worm, written by Robert Morris Jr. in 1988\. It modified the return address on the stack, injected malicious code, then it controlled the system. (See figure 1-1 Stack Smashing Buffer Overflow Attack)
 
-![](media/image1.png)
+![](/media/image1.png)
+###### Figure 1-1 Stack Smashing Buffer Overflow Attack (Source: <sup>[[1]](#footnote1)</sup> )
 
-Figure 1-1 Stack Smashing Buffer Overflow Attack (Source: [StackCheck])
-
-In 1999, StackCheck was introduced to prevent buffer overflow attack on a stack. [StackCheck]
+In 1999, StackCheck was introduced to prevent buffer overflow attack on a stack.<sup>[[1]](#footnote1)</sup>> 
 
 When the program makes a function call, it puts a random digital canary on top of the return address on the stack. When the function returns, the program checks if the canary data is modified. If it is modified, there must be something wrong and a special failure reporting function is invoked before the program returns back to the function address on the stack. (See figure 1-2 Canary Word Next to Return Address)
 
-![](Mydir/media/image2.png)
-
-Figure 1-2 Canary Word Next to Return Address (Source: [StackGuard])
+![](/media/image2.png)
+###### Figure 1-2 Canary Word Next to Return Address (Source: <sup>[[1]](#footnote1)</sup>)
 
 Stack canary is a software feature. It is supported by most compilers.
+
+<a name="footnote1">[1]</a> [[StackCheck](https://www.usenix.org/legacy/publications/library/proceedings/sec98/full_papers/cowan/cowan.pdf)]

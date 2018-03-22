@@ -31,14 +31,21 @@
 
 ## Stack Check Support in Microsoft Visual Studio {#stack-check-support-in-microsoft-visual-studio}
 
-Microsoft Visual Studio supports a stack guard function. “Compiler Security Checks In Depth” [MSVC] introduces the detail on how it works. There are 2 compiler options related: /GS and /RTCs.
+Microsoft Visual Studio supports a stack guard function. “Compiler Security Checks In Depth” <sup>[[1]](#footnote1)</sup>
+introduces the detail on how it works. There are 2 compiler options related: /GS and /RTCs.
 
-/GS [MSVC_GS] is designed to detect some buffer overruns that overwrite a function&#039;s return address. It is similar to the stack guard feature described above.
+/GS <sup>[[2]](#footnote2)</sup>   is designed to detect some buffer overruns that overwrite a function&#039;s return address. It is similar to the stack guard feature described above.
 
-/RTCs [MSVC_RTC] is designed to put 2 tags around (before and after) all individual buffers allocated on the stack. Therefore, both overruns and underflows can be caught.
+/RTCs <sup>[[3]](#footnote2)</sup>   is designed to put 2 tags around (before and after) all individual buffers allocated on the stack. Therefore, both overruns and underflows can be caught.
 
 See figure 1-3 Microsoft Stack Check.
 
-![](Mydir/media/image3.png)
+![](/media/image3.png)
 
-Figure 1-3 – Microsoft Stack Check
+###### Figure 1-3 – Microsoft Stack Check
+
+
+<a name="footnote1">[1]</a> [[MSVC](https://msdn.microsoft.com/library/aa290051.aspx)]
+<a name="footnote2">[2]</a> [[MSVC_GS](/ https://msdn.microsoft.com/en-us/library/8dbf701c.aspx)]
+<a name="footnote3">[3]</a> [[MSVC_RTC](https://msdn.microsoft.com/en-US/library/8wtf2dfz.aspx)] 
+

@@ -108,8 +108,6 @@
 [WindowsHeap4] _Practical Windows XPSP3/2003 Heap Exploitation_, John McDonald and Christopher Valasek, 2009, [http://www.blackhat.com/presentations/bh-usa-09/MCDONALD/BHUSA09-McDonald-WindowsHeap-PAPER.pdf](http://www.blackhat.com/presentations/bh-usa-09/MCDONALD/BHUSA09-McDonald-WindowsHeap-PAPER.pdf)
 
 
-
-
 [WindowsInternal] _Windows Internals, 6th edition,_ Mark E. Russinovich, David A. Solomon, Alex Ionescu, 2012, Microsoft Press. ISBN-13: 978-0735648739/978-0735665873
 [https://www.amazon.com/Windows-Internals-Part-Developer-Reference/dp/0735648735 ](https://www.amazon.com/Windows-Internals-Part-Developer-Reference/dp/0735648735 )
 
