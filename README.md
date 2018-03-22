@@ -34,19 +34,14 @@
 <!---
 ### {{ book.title }}
 -->
+##### WHITEPAPER
 
 {% if book.draft %}
 ** DRAFT FOR REVIEW **
-{% else %}
-** {{ book.version }} **
 {% endif %}
-
 ** {{ gitbook.time|date('MM/DD/YYYY hh:mm:ss') }} **
 
-{% if book.udkrelease %}
-** {{ book.udkrelease }} **
-{% endif %}
-##### WHITEPAPER
+** {{ book.version }} **
 
 #### Contributed by
 
