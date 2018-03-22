@@ -1,0 +1,5 @@
+## General {#general}
+
+[[Tanenbaum](https://www.amazon.com/s/ref=dp_byline_sr_book_1?ie=UTF8&field-author=Andrew+S.+Tanenbaum&search-alias=books&text=Andrew+S.+Tanenbaum&sort=relevancerank)] _Modern Operating Systems, 4<sup>th</sup> edition,_ [Andrew S. Tanenbaum](https://www.amazon.com/s/ref=dp_byline_sr_book_1?ie=UTF8&field-author=Andrew+S.+Tanenbaum&search-alias=books&text=Andrew+S.+Tanenbaum&sort=relevancerank), [Herbert Bos](https://www.amazon.com/Herbert-Bos/e/B00IFD6FTE/ref=dp_byline_cont_book_2), Pearson, 2014, ISBN: 978-0133591620
+
+[Veen] _Memory Errors: the Past, the Present, and the Future_, Victor van der Veen, Nitish dutt-Sharma, Lorenzo Cavallaro, and Herbert Bos, 2012, Research in Attacks, Intrusions, and Defenses, Volume 7462 of the series Lecture Notes in Computer Science pp 86-106\. Springer, ISBN 978-3-642-33337-8
