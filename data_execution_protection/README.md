@@ -30,16 +30,21 @@
 -->
 # _Data Execution Protection_ {#data-execution-protection}
 
-Stack smash attacks may inject code. The other possible way to prevent such an attack is to prevent malicious code from executing. Some modern OS’s already have Data Execution Protection (DEP) support [DEP][PaX]. DEP may be applied to: [WindowsInternal]
+Stack smash attacks may inject code. The other possible way to prevent such an attack is to prevent malicious code from executing. Some modern OS’s already have Data Execution Protection (DEP) support [[DEP](http://media.blackhat.com/bh-us-12/Briefings/M_Miller/BH_US_12_Miller_Exploit_Mitigation_Slides.pdf )] <sup>[[1]](#footnote1)</sup> [[PaX](/ https://pax.grsecurity.net/)] <sup>[[2]](#footnote2)</sup>. DEP may be applied to: [[WindowsInternal](https://www.amazon.com/Windows-Internals-Part-Developer-Reference/dp/0735648735 )]<sup>[[3]](#footnote3)</sup>  
 
 *   User mode stacks
-
 *   User mode pages not specifically marked as executable
-
 *   Kernel mode Stacks
-
 *   kernel paged pool (X64)
-
 *   kernel session pool (X64)
 
-Research shows 14 of 19 exploits from popular exploit kits fail with DEP enabled. [DEP].
+Research shows 14 of 19 exploits from popular exploit kits fail with DEP enabled. [[DEP](http://media.blackhat.com/bh-us-12/Briefings/M_Miller/BH_US_12_Miller_Exploit_Mitigation_Slides.pdf )] <sup>[[1]](#footnote1)</sup>.
+
+
+<a name="footnote1">[1]</a>[[DEP](http://media.blackhat.com/bh-us-12/Briefings/M_Miller/BH_US_12_Miller_Exploit_Mitigation_Slides.pdf )]
+
+<a name="footnote2">[2]</a>[[PaX](/ https://pax.grsecurity.net/)]
+
+<a name="footnote3">[3]</a>[[WindowsInternal](https://www.amazon.com/Windows-Internals-Part-Developer-Reference/dp/0735648735 )]
+
+

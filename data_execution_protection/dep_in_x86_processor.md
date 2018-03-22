@@ -30,4 +30,8 @@
 -->
 ## DEP in X86 Processor {#dep-in-x86-processor}
 
-DEP is a hardware feature. Intel X86 processor supports the XD (eXecution Disable) bit in the page table. [IA32SDM] This XD bit can be used to indicate that a page is an Execute-Disable Page. In order to enable Data Execution Protection, the operating system needs to set the IA32_EFER.NXE (No-eXecution Enable) bit in IA32_EFER MSR, and then set the XD bit in the CPU PAE page table.
+Data Execution Protection (DEP) is a hardware feature. Intel X86 processor supports the `XD` (eXecution Disable) bit in the page table. [[IA32SDM](https://www.intel.com)]<sup>[[1]](#footnote1)</sup>  This XD bit can be used to indicate that a page is an Execute-Disable Page. In order to enable Data Execution Protection, the operating system needs to set the `IA32_EFER.NXE` (No-eXecution Enable) bit in `IA32_EFER MSR`, and then set the XD bit in the CPU PAE page table.
+
+<a name="footnote1">[1]</a>[[IA32SDM](https://www.intel.com)] Intel® 64 and IA-32 Architectures Software Developer’s Manual,
+
+
