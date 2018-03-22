@@ -10,7 +10,7 @@
 * [Data Execution Protection](data_execution_protection/README.md)
   * [DEP in X86 Processor](data_execution_protection/dep_in_x86_processor.md)
   * [DEP in UEFI specification](data_execution_protection/dep_in_uefi_specification.md)
-  * [Enable DEP in EDKII](data_execution_protection/enable_dep_in_edkii.md)
+  * [Enable DEP in EDK II](data_execution_protection/enable_dep_in_edkii.md)
   * [Future work](data_execution_protection/future_work.md)
 * [Address Space Layout Randomization](address_space_layout_randomization/README.md)
   * [ASLR in Windows](address_space_layout_randomization/aslr_in_windows.md)

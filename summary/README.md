@@ -42,7 +42,7 @@ NOTE:
 
 *   “N” means 2 feature must not be enabled together.
 
-*   (*) means this feature is for SMM only.
+*   (*) means this feature is for System Management Mode (SMM) only.
 
 *   No (*) means this feature can be enabled for DXE or SMM.
 

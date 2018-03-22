@@ -31,7 +31,7 @@
 
 ## Stack Overflow Detection {#stack-overflow-detection}
 
-The UEFI specification defined 128 KiB stack size as the minimal requirement. There is no explicit requirement for SMM. A PCD gUefiCpuPkgTokenSpaceGuid.PcdCpuSmmStackSize ([https://github.com/tianocore/edk2/blob/master/UefiCpuPkg/UefiCpuPkg.dec](https://github.com/tianocore/edk2/blob/master/UefiCpuPkg/UefiCpuPkg.dec)) defines the SMM stack size for each processor. The default size is 8KiB, and we observed some platforms set it to be 128KiB.
+The UEFI specification defined 128 KiB stack size as the minimal requirement. There is no explicit requirement for System Management Mode (SMM). A PCD gUefiCpuPkgTokenSpaceGuid.PcdCpuSmmStackSize ([https://github.com/tianocore/edk2/blob/master/UefiCpuPkg/UefiCpuPkg.dec](https://github.com/tianocore/edk2/blob/master/UefiCpuPkg/UefiCpuPkg.dec)) defines the SMM stack size for each processor. The default size is 8KiB, and we observed some platforms set it to be 128KiB.
 
 Since the stack size is not so large, there is risk that stack overflows and overlaps with the data in heap below stack. We need to devise an effective mechanism to detect if the stack is healthy in order to assist the developer in debugging potential issues. To that end we use the stack guard page. See figure 4-1.
 

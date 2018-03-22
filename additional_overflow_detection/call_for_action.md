@@ -31,7 +31,7 @@
 
 ## Call for action {#call-for-action}
 
-1.  Enable the **Stack Overflow detection** to catch stack overflow (especially in SMM)
+1.  Enable the **Stack Overflow detection** to catch stack overflow (especially in System Management Mode (SMM))
 
     1.  gEfiMdeModulePkgTokenSpaceGuid.PcdCpuStackGuard
 

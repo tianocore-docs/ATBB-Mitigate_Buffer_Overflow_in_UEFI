@@ -33,7 +33,7 @@
 
 1.  Size
 
-    If the heap page guard is enabled, the core allocates additional 2 pages for each AllocatePages(). If the heap pool guard is enabled, each AllocatePool() becomes AllocatePages(). Even 1 byte allocation need 12K memory. The heap guard feature will increase memory consumption and may cause memory out of resource. Especially, the SMM code runs in the limited SMRAM (4M or 8M).
+    If the heap page guard is enabled, the core allocates additional 2 pages for each AllocatePages(). If the heap pool guard is enabled, each AllocatePool() becomes AllocatePages(). Even 1 byte allocation need 12K memory. The heap guard feature will increase memory consumption and may cause memory out of resource. Especially, the System Management Mode (SMM) code runs in the limited System Management Mode RAM (SMRAM) (4M or 8M).
 
     We have observed SMRAM out of resource when this feature is turned on. The solution could be:
 
