@@ -33,9 +33,4 @@
 * [Summary](summary/README.md)
   * [Policy Control](summary/policy_control.md)
 * [References](references/README.md)
-  * [General](references/general.md)
-  * [Stack Canaries](references/stack_canaries.md)
-  * [Data Execution Protection](references/data_execution_protection.md)
-  * [Address Space Randomization](references/address_space_randomization.md)
-  * [Additional Overflow Detection](references/additional_overflow_detection.md)
 
