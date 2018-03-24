@@ -31,7 +31,7 @@
 
 ## Heap Overflow Detection (for Page) {#heap-overflow-detection-for-page}
 
-Heap overflow is a big problem. [[WindowsHeap](https://blogs.technet.microsoft.com/srd/2009/08/04/preventing-the-exploitation-of-user-mode-heap-corruption-vulnerabilities/)] discussed some machenisms to detect heap overflow.
+Heap overflow is a big problem. [[WindowsHeap](https://blogs.technet.microsoft.com/srd/2009/08/04/preventing-the-exploitation-of-user-mode-heap-corruption-vulnerabilities/)]<sup>[[1]](#footnote1)</sup>discussed some machenisms to detect heap overflow.
 
 In EDK II, we may setup a guard page around the allocated pages. The concept is similar to the guard page for stack. The `gEfiMdeModulePkgTokenSpaceGuid.PcdHeapGuardPageType` indicates which type page allocation need guard page. The `gEfiMdeModulePkgTokenSpaceGuid.PcdHeapGuardPoolType` indicates which type pool allocation need guard page. The `gEfiMdeModulePkgTokenSpaceGuid.PcdHeapGuardPropertyMask` is a mask to control Heap Guard behavior. All these Platform Configuration Database (PCDs) are defined in [https://github.com/tianocore/edk2/blob/master/MdeModulePkg/MdeModulePkg.dec](https://github.com/tianocore/edk2/blob/master/MdeModulePkg/MdeModulePkg.dec).
 
@@ -72,3 +72,8 @@ For a system with 4G memory, two levels of tables can track the whole memory, be
 Given the memory address `0x6DFFD000`, the **L3** table index is first 4 bits, the **L4** table index is the 10 bits followed by. The corresponding guarded heap entry in **L4** table index `0x37F – 0xB19CAF0B`. The bit offset is the 6 bits followed by **L4** table index. In this case, it is `0x3D`. Since bit `0x3D` of `0xB19CAF0B` is 1, we can know the page `0x6DFFD000` is guarded.
 
 The guarded heap map management is at [https://github.com/tianocore/edk2/blob/master/MdeModulePkg/Core/Dxe/Mem/HeapGuard.c](https://github.com/tianocore/edk2/blob/master/MdeModulePkg/Core/Dxe/Mem/HeapGuard.c). `mGuardedMemoryMap` is the pointer to table tracking the Guarded memory with bitmap, `mMapLevel` is the Current depth level of map table pointed by `mGuardedMemoryMap. SetGuardForMemory()` is to set head Guard and tail Guard for the given memory range.` UnsetGuardForMemory()` is to clear head Guard and tail Guard for the given memory range.
+<BR>
+<BR>
+<BR>
+<hr>
+<a name="footnote1">[1]</a>[[WindowsHeap](https://blogs.technet.microsoft.com/srd/2009/08/04/preventing-the-exploitation-of-user-mode-heap-corruption-vulnerabilities/)] Preventing the exploitation of user mode heap corruption vulnerabilities, 2009

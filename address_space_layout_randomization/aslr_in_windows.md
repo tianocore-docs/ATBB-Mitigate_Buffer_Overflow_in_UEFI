@@ -28,7 +28,7 @@
   ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 -->
-## Address Sace Layout Randomization (ASLR) in Windows {#aslr-in-windows}
+## Address Sace Layout Randomization (ASLR) in Windows\* {#aslr-in-windows}
 
 Windows supports Address Sace Layout Randomization (ASLR). [[WindowsInternal](https://www.amazon.com/Windows-Internals-Part-Developer-Reference/dp/0735648735 )] <sup>[[1]](#footnote1)</sup>  desribes the detail on how executable images, DLL, stack, heap are randomized.
 
@@ -49,6 +49,15 @@ The following Diagram showing how the physical memory location of various system
 ![](/media/image6.png)
 
 ###### Figure 3-3 Image layout during boot, source: [[ASLR2](http://blogs.msdn.com/b/ie/archive/2012/03/12/enhanced-memory-protections-in-ie10.aspx)]<sup>[[3]](#footnote3)</sup>
+
+<BR>
+<BR>
+<BR>
+<hr>
+
+
+
+
 
 
 <a name="footnote1">[1]</a> [[WindowsInternal](https://www.amazon.com/Windows-Internals-Part-Developer-Reference/dp/0735648735 )] Windows Internals, 6th edition, Mark E. Russinovich, David A. Solomon, Alex Ionescu, 2012, Microsoft Press. ISBN-13: 978-0735648739/978-0735665873

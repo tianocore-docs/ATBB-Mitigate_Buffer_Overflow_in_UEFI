@@ -31,6 +31,14 @@
 ## Address Sace Layout Randomization (ASLR) in *nix {#aslr-in-nix}
 
 [[PaX](https://grsecurity.net/PaX-presentation.ppt)] <sup>[[1]](#footnote1)</sup>  also provides an ASLR patch for Linux and OpenBSD. [[OpenBSD](http://www.openbsd.org/papers/ven05-deraadt)]<sup>[[2]](#footnote2)</sup>  and [[PIE](http://www.openbsd.org/papers/nycbsdcon08-pie/)]<sup>[[3]](#footnote3)</sup>  provide detailed information on the randomized image layout.
+<BR>
+<BR>
+<BR>
+
+
+
+
+
 
 <hr>
 
@@ -39,4 +47,4 @@
 
 <a name="footnote2">[2]</a>[[OpenBSD](http://www.openbsd.org/papers/ven05-deraadt)] Exploit Mitigation Techniques, Theo de Raadt
 
-<a name="footnote3">[3]</a>[[PIE](http://www.openbsd.org/papers/nycbsdcon08-pie/)] OpenBSD’s Position Independent Executable (PIE) Implementation, Kurt Miller, 
+<a name="footnote3">[3]</a>[[PIE](http://www.openbsd.org/papers/nycbsdcon08-pie/)] OpenBSD’s Position Independent Executable (PIE) Implementation, Kurt Miller

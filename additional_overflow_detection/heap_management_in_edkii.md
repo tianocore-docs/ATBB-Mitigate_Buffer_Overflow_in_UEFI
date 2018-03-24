@@ -33,9 +33,9 @@
 
 In UEFI, the `DxeCore` maintains the heap usage. The UEFI driver or application may call `AllocatePages/FreePages/AllocatePool/FreePool` to allocate or free the resource, or call `GetMemoryMap()` to review all of the memory usage.
 
-**[Heap Initialization]**
+###[Heap Initialization]
 
-When `DxeIpl` transfers control to the `DxeCore`, all of the resource information is reported in a Hand-off-Block (HOB) [[PI](http://www.uefi.org/sites/default/files/resources/PI%201.5.zip)] list. The `DxeCore` constructs the heap based upon the HOB information. See figure 4-2 Heap Initialization.
+When `DxeIpl` transfers control to the `DxeCore`, all of the resource information is reported in a Hand-off-Block (HOB) [[PI](http://www.uefi.org/sites/default/files/resources/PI%201.5.zip)]<sup>[[1]](#footnote1)</sup> list. The `DxeCore` constructs the heap based upon the HOB information. See figure 4-2 Heap Initialization.
 
 1.  The `DxeCore` needs to find one region to serve as the initial memory in **CoreInitializeMemoryServices()**[https://github.com/tianocore/edk2/blob/master/MdeModulePkg/Core/Dxe/Gcd/Gcd.c](https://github.com/tianocore/edk2/blob/master/MdeModulePkg/Core/Dxe/Gcd/Gcd.c)). The function is responsible for priming the memory map so that memory allocations and resource allocations can be made. If the memory region described by the Phase Handoff Information Table (PHIT) HOB is big enough to hold BIN and minimum initial memory, this memory region is used as highest priority. It can make the memory BIN allocation to be at the same memory region with PHIT that has better compatibility to avoid memory fragmentation. Usually the BIN size is already considered by platform Pre-EFI  Initialization Module (PEIM) when the platform PEIM calls `InstallPeiMemory()` to PEI core.
 
@@ -62,7 +62,7 @@ Now the `DxeCore` heap initialization is done. The rest of `DxeCore` and any dri
 
 ###### Figure 4-2 Heap Initialization
 
-**[Page Management]**
+###[Page Management]
 
 After the heap is initialized, the `DxeCore` maintains a list of memory map entries. See figure 4-3 Page management. This is a linked list with the memory addresses in ascending order. It contains memory address, length, type and attribute at the page level. When the UEFI service `GetMemoryMap()` is called, the contents of this linked list are returned, together with other Memory Mapped I/O (MMIO) with `EFI_MEMORY_RUNTIME` attribute and the reserved memory in the GCD resource list.
 
@@ -108,7 +108,7 @@ Figure 4-4.5 Page Management – Clip: Step 5
 
 Later, when `FreePages()` happens, 2 or more MEMORY_MAP entries can be merged into one. The unused MEMORY_MAP entries are returned to `mFreeMemoryMapEntryList`. Those entries can be used in a subsequent `AllocatePages()`.
 
-**[Pool Management]**
+###[Pool Management]
 
 Besides page management, `DxeCore` maintains the pool. A typical UEFI driver or application calls `gBS-&gt;AllocatePool()` for memory allocation.
 
@@ -139,3 +139,8 @@ If there is no available entry in all FreeList, `CoreAllocatePoolI()` calls `Cor
 **Step 2:** Since the size of this POOL_FREE candidate entry is bigger than the one requested, `CoreAllocatePoolI()` records the requested entry (the RED one) and splits up the remaining space (the GREEN one) into free pool blocks (such as `FreeList[1]`). The head of the request entry is changed from POOL_FREE to POOL_HEAD to record the pool information, such as size and type.
 
 Later, when `FreePool()` is called, the information in POOL_HEAD can be used to discover into which FreeList it should be returned. If the pool size is too big to fit in all FreeList, it is a PoolPage and freed by `CoreFreePoolPages()`. Alternately, this POOL_HEAD is converted to POOL_FREE and is inserted into one of the proper FreeList. `CoreFreePoolI()` also makes an additional check to see if all the pool entries in the same page as Free are freed pool entries. If so, all of these pool entries are removed from the free loop lists, and `CoreFreePoolPages()` is called to free the entire pages.
+<BR>
+<BR>
+<BR>
+<hr>
+<a name="footnote1">[1]</a>[[PI](http://www.uefi.org/sites/default/files/resources/PI%201.5.zip )] UEFI Platform Initialization Specification, Version 1.5 

@@ -45,7 +45,7 @@
 
     If the heap guard is enabled, the CPU driver need update the page table for every `AllocatePool()`, flush translation lookaside buffer (TLB). It brings overhead.
 
-    We have observed the performance downgrade in UEFI Shell, such as `DEVTREE` command or shell script.
+    We have observed the performance downgrade in UEFI Shell, such as the `DEVTREE` command or shell script.
 
     Some of the performance drop can be resolved by removing the page table synchronization from Boot Strap Processor (BSP) to Application Processors (AP)s. When BSP wakes up APs later, the page table is always rewritten. Paging synchronization is unnecessary.
 
@@ -55,9 +55,9 @@
 
     From technical perspective, we can add paging-based guard after the permanent memory is initialized in PEI. Stack guard, heap guard or NULL pointer detection can be enabled.
 
-    Before the permanent memory is initialize, if we need enabling paging, we can only set paging table on A) Flash Region with Access and Dirty bit set. B) Cache as Ram. C) Static RAM. #A can only support read-only paging, while #B and #C has size limitation.
+    Before the permanent memory is initialize, if we need enabling paging, we can only set paging table on A) Flash Region with Access and Dirty bit set. B) Cache as Ram. C) Static RAM. `#A` can only support read-only paging, while `#B` and `#C` has size limitation.
 
-    In EDK II community, Brian Johnson also provided another way to enable the NULL pointer detection ([https://bugzilla.tianocore.org/show_bug.cgi?id=687](https://bugzilla.tianocore.org/show_bug.cgi?id=687)). We can set “_the GDT descriptor for the data segment from a &quot;extend up&quot; type based at 0, to an &quot;extend down&quot; type with a limit of 0\. This disables access to the 4k page at 0 due to the way the limit math works with &quot;extend down&quot; descriptors._”
+    In the EDK II community, Brian Johnson also provided another way to enable the NULL pointer detection ([https://bugzilla.tianocore.org/show_bug.cgi?id=687](https://bugzilla.tianocore.org/show_bug.cgi?id=687)). We can set “_the GDT descriptor for the data segment from a &quot;extend up&quot; type based at 0, to an &quot;extend down&quot; type with a limit of 0\. This disables access to the 4k page at 0 due to the way the limit math works with &quot;extend down&quot; descriptors._”
 
 4.  **Pool Underflow/Overflow detection**
 
@@ -69,8 +69,8 @@
 
     Current emulation environment (such as NT32) does not have capability to modify CPU page table directly. As such we are not able to enable such page table based protection.
 
-   In the future, we may be able to set up memory for NT32 application process and then use this function to change page protections for pages within that process to match what we have done for the real hardware. For example: [https://msdn.microsoft.com/en-us/library/windows/desktop/aa366898(v=vs.85).aspx](https://msdn.microsoft.com/en-us/library/windows/desktop/aa366898(v=vs.85).aspx))  
-
+   In the future, we may be able to set up memory for NT32 application process and then use this function to change page protections for pages within that process to match what we have done for the real hardware. 
+   For example: [https://msdn.microsoft.com/en-us/library/windows/desktop/aa366898(v=vs.85).aspx]
 ```
 
      BOOL WINAPI VirtualProtect(
@@ -80,6 +80,5 @@
      _Out_ PDWORD lpflOldProtect
      ); 
 ```
-     `FlNewProtect` values: [https://msdn.microsoft.com/en-us/library/windows/desktop/aa366786(v=vs.85).aspx](https://msdn.microsoft.com/en-us/library/windows/desktop/aa366786(v=vs.85).aspx)
-  
+ `FlNewProtect` values: [https://msdn.microsoft.com/en-us/library/windows/desktop/aa366786(v=vs.85).aspx]
   

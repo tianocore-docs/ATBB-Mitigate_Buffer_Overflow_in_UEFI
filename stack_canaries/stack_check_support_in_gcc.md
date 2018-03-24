@@ -29,7 +29,7 @@
 
 -->
 
-## Stack Check Support in GNU Compiler Collection(GCC) {#stack-check-support-in-gcc}
+## Stack Check Support in GNU Compiler Collection\*(GCC) {#stack-check-support-in-gcc}
 
 The first stack guard is supported in GCC. Current GCC supports: ` -fstack-protector, -fstack-protector-all, and -fstack-protector-strong`.[[StackCanaries](http://en.wikipedia.org/wiki/Buffer_overflow_protection)]  <sup>[[1]](#footnote1)</sup>   .
 
