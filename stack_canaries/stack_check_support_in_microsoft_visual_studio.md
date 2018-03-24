@@ -29,9 +29,9 @@
 
 -->
 
-## Stack Check Support in Microsoft Visual Studio {#stack-check-support-in-microsoft-visual-studio}
+## Stack Check Support in Microsoft Visual Studio\* {#stack-check-support-in-microsoft-visual-studio}
 
-Microsoft Visual Studio\* supports a stack guard function. “Compiler Security Checks In Depth” [[MSVC](https://msdn.microsoft.com/library/aa290051.aspx)] <sup>[[1]](#footnote1)</sup>
+Microsoft Visual Studio supports a stack guard function. “Compiler Security Checks In Depth” [[MSVC](https://msdn.microsoft.com/library/aa290051.aspx)] <sup>[[1]](#footnote1)</sup>
 introduces the detail on how it works. There are 2 compiler options related:` /GS` and `/RTC`.
 
 `/GS `[[MSVC_GS](/ https://msdn.microsoft.com/en-us/library/8dbf701c.aspx)] <sup>[[2]](#footnote2)</sup>   is designed to detect some buffer overruns that overwrite a function&#039;s return address. It is similar to the stack guard feature described above.
