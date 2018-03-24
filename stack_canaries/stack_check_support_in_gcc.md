@@ -35,9 +35,17 @@ The first stack guard is supported in GCC. Current GCC supports: ` -fstack-prote
 
 `-fstack-protector-strong `is recommended because “this option tries to hit the balance between an over-simplified version and an over-killing protection schema”. [[GCC](https://docs.google.com/document/d/1xXBH6rRZue4f296vGt9YQcuLVQHeE516stHwt8)] <sup>[[2]](#footnote2)</sup>  
 
+<BR>
+<BR>
+<BR>
+<hr>
 
-<a name="footnote1">[1]</a> [[StackCanaries](http://en.wikipedia.org/wiki/Buffer_overflow_protection)]
 
-<a name="footnote2">[2]</a> [[GCC](https://docs.google.com/document/d/1xXBH6rRZue4f296vGt9YQcuLVQHeE516stHwt8)]
+
+<a name="footnote1">[1]</a> [[StackCanaries](http://en.wikipedia.org/wiki/Buffer_overflow_protection)]  Buffer overflow protection - Wikipedia.org
+
+
+
+<a name="footnote2">[2]</a> [[GCC](https://docs.google.com/document/d/1xXBH6rRZue4f296vGt9YQcuLVQHeE516stHwt8)] Proposal to add a new stack-smashing-attack protection mechanism “-fstack-protector-strong”
 
 

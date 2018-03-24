@@ -44,10 +44,15 @@ See figure 1-3 Microsoft Stack Check.
 
 ###### Figure 1-3 – Microsoft Stack Check
 
+<BR>
+<BR>
+<BR>
+<hr>
 
-<a name="footnote1">[1]</a> [[MSVC](https://msdn.microsoft.com/library/aa290051.aspx)]
 
-<a name="footnote2">[2]</a> [[MSVC_GS](/ https://msdn.microsoft.com/en-us/library/8dbf701c.aspx)]
+<a name="footnote1">[1]</a> [[MSVC](https://msdn.microsoft.com/library/aa290051.aspx)] Compiler Security Checks In Depth
 
-<a name="footnote3">[3]</a> [[MSVC_RTC](https://msdn.microsoft.com/en-US/library/8wtf2dfz.aspx)] 
+<a name="footnote2">[2]</a> [[MSVC_GS](/ https://msdn.microsoft.com/en-us/library/8dbf701c.aspx)] /GS (Buffer Security Check)
+
+<a name="footnote3">[3]</a> [[MSVC_RTC](https://msdn.microsoft.com/en-US/library/8wtf2dfz.aspx)]  /RTC (Run-Time Error Checks) 
 

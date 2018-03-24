@@ -37,6 +37,13 @@ If a System Management Mode (SMM) module enables stack check, the fail program c
 ### Summary {#summary}
 
 This section introduces the concept of stack canaries and how to enable this feature in EDK II.
+<BR>
+<BR>
+<BR>
+<hr>
 
-<a name="footnote1">[1]</a> [[MSVC_FASTFAIL](https://msdn.microsoft.com/en-us/library/dn774154.aspx)]
-<a name="footnote2">[2]</a> [[PI](http://www.uefi.org/sites/default/files/resources/PI%201.5.zip)]
+
+
+
+<a name="footnote1">[1]</a> [[MSVC_FASTFAIL](https://msdn.microsoft.com/en-us/library/dn774154.aspx)] Microsoft.com- _fastfail,
+<a name="footnote2">[2]</a> [[PI](http://www.uefi.org/sites/default/files/resources/PI%201.5.zip)] UEFI Platform Initialization Specification, Version 1.5 

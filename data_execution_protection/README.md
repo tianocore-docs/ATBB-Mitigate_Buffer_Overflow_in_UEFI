@@ -40,11 +40,19 @@ Stack smash attacks may inject code. The other possible way to prevent such an a
 
 Research shows 14 of 19 exploits from popular exploit kits fail with DEP enabled. [[DEP](http://media.blackhat.com/bh-us-12/Briefings/M_Miller/BH_US_12_Miller_Exploit_Mitigation_Slides.pdf )] <sup>[[1]](#footnote1)</sup>.
 
+<BR>
+<BR>
+<BR>
+<hr>
 
-<a name="footnote1">[1]</a>[[DEP](http://media.blackhat.com/bh-us-12/Briefings/M_Miller/BH_US_12_Miller_Exploit_Mitigation_Slides.pdf )]
 
-<a name="footnote2">[2]</a>[[PaX](/ https://pax.grsecurity.net/)]
 
-<a name="footnote3">[3]</a>[[WindowsInternal](https://www.amazon.com/Windows-Internals-Part-Developer-Reference/dp/0735648735 )]
+
+
+<a name="footnote1">[1]</a>[[DEP](http://media.blackhat.com/bh-us-12/Briefings/M_Miller/BH_US_12_Miller_Exploit_Mitigation_Slides.pdf )] Exploit Mitigation Improvements in Windows 8, Ken Johnson, Ma, Miller
+
+<a name="footnote2">[2]</a>[[PaX](/ https://pax.grsecurity.net/)] PaX Home Page, https://pax.grsecurity.net/
+
+<a name="footnote3">[3]</a>[[WindowsInternal](https://www.amazon.com/Windows-Internals-Part-Developer-Reference/dp/0735648735 )] Windows Internals, 6th edition, Mark E. Russinovich, David A. Solomon, Alex Ionescu, 2012, Microsoft Press. ISBN-13: 978-0735648739/978-0735665873
 
 

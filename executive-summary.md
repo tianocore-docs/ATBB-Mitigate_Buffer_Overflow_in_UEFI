@@ -29,6 +29,9 @@
 
 -->
 **Introduction**
-A buffer overflow is “one of the most important exploitation techniques in the history of computer security.”  [ [Tanenbaum](https://www.amazon.com/s/ref=dp_byline_sr_book_1?ie=UTF8&field-author=Andrew+S.+Tanenbaum&search-alias=books&text=Andrew+S.+Tanenbaum&sort=relevancerank )]<sup>[[1]](#Tanenbaum)</sup> “Buffer overflows are ideally suited for introducing three of the most important protection mechanisms available in most modern systems: stack canaries, data execution protection, and address-space layout randomization.” [ [Tanenbaum](https://www.amazon.com/s/ref=dp_byline_sr_book_1?ie=UTF8&field-author=Andrew+S.+Tanenbaum&search-alias=books&text=Andrew+S.+Tanenbaum&sort=relevancerank )] <sup>[[1]](#Tanenbaum)</sup> However, the current UEFI firmware implementation only adopted a few of these mechanisms. This paper will introduce how to enable the protection mechanisms in UEFI firmware to harden the pre-boot phase.
-
-<a name="Tanenbaum">[1] </a> [ [Tanenbaum](https://www.amazon.com/s/ref=dp_byline_sr_book_1?ie=UTF8&field-author=Andrew+S.+Tanenbaum&search-alias=books&text=Andrew+S.+Tanenbaum&sort=relevancerank )]
+A buffer overflow is “one of the most important exploitation techniques in the history of computer security.”  [ [Tanenbaum](https://www.amazon.com/s/ref=dp_byline_sr_book_1?ie=UTF8&field-author=Andrew+S.+Tanenbaum&search-alias=books&text=Andrew+S.+Tanenbaum&sort=relevancerank )]<sup>[[1]](#Tanenbaum)</sup> “Buffer overflows are ideally suited for introducing three of the most important protection mechanisms available in most modern systems: stack canaries, data execution protection, and address-space layout randomization.” [[Tanenbaum](https://www.amazon.com/s/ref=dp_byline_sr_book_1?ie=UTF8&field-author=Andrew+S.+Tanenbaum&search-alias=books&text=Andrew+S.+Tanenbaum&sort=relevancerank )] <sup>[[1]](#Tanenbaum)</sup> However, the current UEFI firmware implementation only adopted a few of these mechanisms. This paper will introduce how to enable the protection mechanisms in UEFI firmware to harden the pre-boot phase.
+<BR>
+<BR>
+<BR>
+<hr>
+<a name="Tanenbaum">[1] </a> [ [Tanenbaum](https://www.amazon.com/s/ref=dp_byline_sr_book_1?ie=UTF8&field-author=Andrew+S.+Tanenbaum&search-alias=books&text=Andrew+S.+Tanenbaum&sort=relevancerank )] Modern Operating Systems, 4th edition, Andrew S. Tanenbaum, Herbert Bos, Pearson, 2014, ISBN: 978-0133591620 

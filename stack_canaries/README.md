@@ -43,5 +43,9 @@ When the program makes a function call, it puts a random digital canary on top o
 ###### Figure 1-2 Canary Word Next to Return Address (Source: [[StackCheck](https://www.usenix.org/legacy/publications/library/proceedings/sec98/full_papers/cowan/cowan.pdf)]<sup>[[1]](#footnote1)</sup>)
 
 Stack canary is a software feature. It is supported by most compilers.
+<BR>
+<BR>
+<BR>
+<hr>
 
-<a name="footnote1">[1]</a> [[StackCheck](https://www.usenix.org/legacy/publications/library/proceedings/sec98/full_papers/cowan/cowan.pdf)]
+<a name="footnote1">[1]</a> [[StackCheck](https://www.usenix.org/legacy/publications/library/proceedings/sec98/full_papers/cowan/cowan.pdf)] StackGuard: Automatic Adaptive Detection and Prevention of Buffer-Overflow Attacks. Cowan, C., Pu, C., Maier, D., Hintongif, H., Walpole, J., Bakke, P., Beattie, S., Grier, A., Wagle, P., Zhang, Q. Proceedings of the 7th USENIX Security Symposium (January 1998)
