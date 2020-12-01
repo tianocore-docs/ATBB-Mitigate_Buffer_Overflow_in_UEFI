@@ -1,0 +1,723 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Read-only page table · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="limitation.html" />
+    
+    
+    <link rel="prev" href="null_pointer_protection_in_edkii.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    A Tour Beyond BIOS - Security Enhancement to Mitigate Buffer Overflow in UEFI
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../executive-summary.html">
+            
+                <a href="../executive-summary.html">
+            
+                    
+                    Executive Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../stack_canaries/">
+            
+                <a href="../stack_canaries/">
+            
+                    
+                    Stack Canaries
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../stack_canaries/stack_check_support_in_microsoft_visual_studio.html">
+            
+                <a href="../stack_canaries/stack_check_support_in_microsoft_visual_studio.html">
+            
+                    
+                    Stack Check Support in Microsoft Visual Studio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../stack_canaries/stack_check_support_in_gcc.html">
+            
+                <a href="../stack_canaries/stack_check_support_in_gcc.html">
+            
+                    
+                    Stack Check Support in GCC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../stack_canaries/enable_stack_check_in_edkii.html">
+            
+                <a href="../stack_canaries/enable_stack_check_in_edkii.html">
+            
+                    
+                    Enable Stack Check in EDK II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../stack_canaries/future_work.html">
+            
+                <a href="../stack_canaries/future_work.html">
+            
+                    
+                    Future work
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../data_execution_protection/">
+            
+                <a href="../data_execution_protection/">
+            
+                    
+                    Data Execution Protection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../data_execution_protection/dep_in_x86_processor.html">
+            
+                <a href="../data_execution_protection/dep_in_x86_processor.html">
+            
+                    
+                    DEP in X86 Processor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../data_execution_protection/dep_in_uefi_specification.html">
+            
+                <a href="../data_execution_protection/dep_in_uefi_specification.html">
+            
+                    
+                    DEP in UEFI specification
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../data_execution_protection/enable_dep_in_edkii.html">
+            
+                <a href="../data_execution_protection/enable_dep_in_edkii.html">
+            
+                    
+                    Enable DEP in EDK II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../data_execution_protection/future_work.html">
+            
+                <a href="../data_execution_protection/future_work.html">
+            
+                    
+                    Future work
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../address_space_layout_randomization/">
+            
+                <a href="../address_space_layout_randomization/">
+            
+                    
+                    Address Space Layout Randomization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../address_space_layout_randomization/aslr_in_windows.html">
+            
+                <a href="../address_space_layout_randomization/aslr_in_windows.html">
+            
+                    
+                    ASLR in Windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../address_space_layout_randomization/aslr_in_nix.html">
+            
+                <a href="../address_space_layout_randomization/aslr_in_nix.html">
+            
+                    
+                    ASLR in *nix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../address_space_layout_randomization/aslr_requirement_in_uefi_firmware.html">
+            
+                <a href="../address_space_layout_randomization/aslr_requirement_in_uefi_firmware.html">
+            
+                    
+                    ASLR requirement in UEFI firmware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../address_space_layout_randomization/enable_aslr_for_uefi_in_edkii.html">
+            
+                <a href="../address_space_layout_randomization/enable_aslr_for_uefi_in_edkii.html">
+            
+                    
+                    Enable ASLR for UEFI in EDK II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../address_space_layout_randomization/enable_aslr_for_smm_in_edkii.html">
+            
+                <a href="../address_space_layout_randomization/enable_aslr_for_smm_in_edkii.html">
+            
+                    
+                    Enable ASLR for SMM in EDK II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../address_space_layout_randomization/future_work.html">
+            
+                <a href="../address_space_layout_randomization/future_work.html">
+            
+                    
+                    Future work
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Additional Overflow Detection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="stack_overflow_detection.html">
+            
+                <a href="stack_overflow_detection.html">
+            
+                    
+                    Stack Overflow Detection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="heap_management_in_edkii.html">
+            
+                <a href="heap_management_in_edkii.html">
+            
+                    
+                    Heap Management in EDKII
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="heap_overflow_detection_for_page.html">
+            
+                <a href="heap_overflow_detection_for_page.html">
+            
+                    
+                    Heap Overflow Detection (for Page)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="heap_overflow_detection_for_pool.html">
+            
+                <a href="heap_overflow_detection_for_pool.html">
+            
+                    
+                    Heap Overflow Detection (for Pool)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="null_pointer_protection_in_edkii.html">
+            
+                <a href="null_pointer_protection_in_edkii.html">
+            
+                    
+                    NULL Pointer Protection in EDK II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.6" data-path="read-only_page_table.html">
+            
+                <a href="read-only_page_table.html">
+            
+                    
+                    Read-only page table
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="limitation.html">
+            
+                <a href="limitation.html">
+            
+                    
+                    Limitation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="compatibility_consideration.html">
+            
+                <a href="compatibility_consideration.html">
+            
+                    
+                    Compatibility Consideration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="call_for_action.html">
+            
+                <a href="call_for_action.html">
+            
+                    
+                    Call for action
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="future_work.html">
+            
+                <a href="future_work.html">
+            
+                    
+                    Future work
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../summary/">
+            
+                <a href="../summary/">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../summary/policy_control.html">
+            
+                <a href="../summary/policy_control.html">
+            
+                    
+                    Policy Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../references/">
+            
+                <a href="../references/">
+            
+                    
+                    References
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+	
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Read-only page table</a>
+    </h1>
+</div>
+<div>
+    <!-- 
+    <img style="float:left; align:middle; height:2em" src="media/TianocoreTitlePageLogo.jpg"/>
+     -->
+    
+      <h2>
+        <div style="position:absolute;text-align:left">Security Enhancement to Mitigate Buffer Overflow in UEFI</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT </div>
+        <div style="text-align:right">Revision 02.0</div>
+      </h2>  
+    
+    <hr>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <!--- @file
+  Additional Overflow Detection file: -Read-only page table
+
+  Copyright (c) 2018, Intel Corporation. All rights reserved.<BR>
+
+  Redistribution and use in source (original document form) and 'compiled'
+  forms (converted to PDF, epub, HTML and other formats) with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1) Redistributions of source code (original document form) must retain the
+     above copyright notice, this list of conditions and the following
+     disclaimer as the first lines of this file unmodified.
+
+  2) Redistributions in compiled form (transformed to other DTDs, converted to
+     PDF, epub, HTML and other formats) must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+
+  THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT "AS IS" AND ANY EXPRESS OR
+  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+  EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
+  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<h2 id="read-only-page-table">Read-only page table </h2>
+<p>Because we use CPU page table to provide such detection, <code>DxeIpl</code> does one more enhancement to set page table itself to be read only. (<a href="https://github.com/tianocore/edk2/blob/master/MdeModulePkg/Core/DxeIplPeim/X64/VirtualMemory.c" target="_blank">https://github.com/tianocore/edk2/blob/master/MdeModulePkg/Core/DxeIplPeim/X64/VirtualMemory.c</a> <code>SetPageTablePoolReadOnly()</code>) If the buffer overflow impacts the page table, it can be detected immediately.</p>
+<p>The CPU driver needs to be aware of this and carefully clear <code>CR0_WP</code> bit before modifying the page table and restore <code>CR0</code> after modification. (<a href="https://github.com/tianocore/edk2/blob/master/UefiCpuPkg/CpuDxe/CpuPageTable.c" target="_blank">https://github.com/tianocore/edk2/blob/master/UefiCpuPkg/CpuDxe/CpuPageTable.c</a>)</p>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                    
+                    
+
+<div>
+    <hr>
+    
+      <h2>
+        <div style="position:absolute;text-align:left">Security Enhancement to Mitigate Buffer Overflow in UEFI</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT </div>
+        <div style="text-align:right">Revision 02.0</div>
+      </h2>  
+    
+</div>
+
+
+
+                
+            </div>
+
+            
+                
+                <a href="null_pointer_protection_in_edkii.html" class="navigation navigation-prev " aria-label="Previous page: NULL Pointer Protection in EDK II">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="limitation.html" class="navigation navigation-next " aria-label="Next page: Limitation">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Read-only page table","level":"1.5.6","depth":2,"next":{"title":"Limitation","level":"1.5.7","depth":2,"path":"additional_overflow_detection/limitation.md","ref":"additional_overflow_detection/limitation.md","articles":[]},"previous":{"title":"NULL Pointer Protection in EDK II","level":"1.5.5","depth":2,"path":"additional_overflow_detection/null_pointer_protection_in_edkii.md","ref":"additional_overflow_detection/null_pointer_protection_in_edkii.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"Security Enhancement to Mitigate Buffer Overflow in UEFI","version":"Revision 02.0"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"additional_overflow_detection/read-only_page_table.md","mtime":"2020-12-01T07:02:04.432Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-01T07:02:33.925Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

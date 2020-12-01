@@ -1,0 +1,790 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Heap Management in EDKII · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="heap_overflow_detection_for_page.html" />
+    
+    
+    <link rel="prev" href="stack_overflow_detection.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    A Tour Beyond BIOS - Security Enhancement to Mitigate Buffer Overflow in UEFI
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../executive-summary.html">
+            
+                <a href="../executive-summary.html">
+            
+                    
+                    Executive Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../stack_canaries/">
+            
+                <a href="../stack_canaries/">
+            
+                    
+                    Stack Canaries
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../stack_canaries/stack_check_support_in_microsoft_visual_studio.html">
+            
+                <a href="../stack_canaries/stack_check_support_in_microsoft_visual_studio.html">
+            
+                    
+                    Stack Check Support in Microsoft Visual Studio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../stack_canaries/stack_check_support_in_gcc.html">
+            
+                <a href="../stack_canaries/stack_check_support_in_gcc.html">
+            
+                    
+                    Stack Check Support in GCC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../stack_canaries/enable_stack_check_in_edkii.html">
+            
+                <a href="../stack_canaries/enable_stack_check_in_edkii.html">
+            
+                    
+                    Enable Stack Check in EDK II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../stack_canaries/future_work.html">
+            
+                <a href="../stack_canaries/future_work.html">
+            
+                    
+                    Future work
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../data_execution_protection/">
+            
+                <a href="../data_execution_protection/">
+            
+                    
+                    Data Execution Protection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../data_execution_protection/dep_in_x86_processor.html">
+            
+                <a href="../data_execution_protection/dep_in_x86_processor.html">
+            
+                    
+                    DEP in X86 Processor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../data_execution_protection/dep_in_uefi_specification.html">
+            
+                <a href="../data_execution_protection/dep_in_uefi_specification.html">
+            
+                    
+                    DEP in UEFI specification
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../data_execution_protection/enable_dep_in_edkii.html">
+            
+                <a href="../data_execution_protection/enable_dep_in_edkii.html">
+            
+                    
+                    Enable DEP in EDK II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../data_execution_protection/future_work.html">
+            
+                <a href="../data_execution_protection/future_work.html">
+            
+                    
+                    Future work
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../address_space_layout_randomization/">
+            
+                <a href="../address_space_layout_randomization/">
+            
+                    
+                    Address Space Layout Randomization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../address_space_layout_randomization/aslr_in_windows.html">
+            
+                <a href="../address_space_layout_randomization/aslr_in_windows.html">
+            
+                    
+                    ASLR in Windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../address_space_layout_randomization/aslr_in_nix.html">
+            
+                <a href="../address_space_layout_randomization/aslr_in_nix.html">
+            
+                    
+                    ASLR in *nix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../address_space_layout_randomization/aslr_requirement_in_uefi_firmware.html">
+            
+                <a href="../address_space_layout_randomization/aslr_requirement_in_uefi_firmware.html">
+            
+                    
+                    ASLR requirement in UEFI firmware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../address_space_layout_randomization/enable_aslr_for_uefi_in_edkii.html">
+            
+                <a href="../address_space_layout_randomization/enable_aslr_for_uefi_in_edkii.html">
+            
+                    
+                    Enable ASLR for UEFI in EDK II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../address_space_layout_randomization/enable_aslr_for_smm_in_edkii.html">
+            
+                <a href="../address_space_layout_randomization/enable_aslr_for_smm_in_edkii.html">
+            
+                    
+                    Enable ASLR for SMM in EDK II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../address_space_layout_randomization/future_work.html">
+            
+                <a href="../address_space_layout_randomization/future_work.html">
+            
+                    
+                    Future work
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Additional Overflow Detection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="stack_overflow_detection.html">
+            
+                <a href="stack_overflow_detection.html">
+            
+                    
+                    Stack Overflow Detection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.2" data-path="heap_management_in_edkii.html">
+            
+                <a href="heap_management_in_edkii.html">
+            
+                    
+                    Heap Management in EDKII
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="heap_overflow_detection_for_page.html">
+            
+                <a href="heap_overflow_detection_for_page.html">
+            
+                    
+                    Heap Overflow Detection (for Page)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="heap_overflow_detection_for_pool.html">
+            
+                <a href="heap_overflow_detection_for_pool.html">
+            
+                    
+                    Heap Overflow Detection (for Pool)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="null_pointer_protection_in_edkii.html">
+            
+                <a href="null_pointer_protection_in_edkii.html">
+            
+                    
+                    NULL Pointer Protection in EDK II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="read-only_page_table.html">
+            
+                <a href="read-only_page_table.html">
+            
+                    
+                    Read-only page table
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="limitation.html">
+            
+                <a href="limitation.html">
+            
+                    
+                    Limitation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="compatibility_consideration.html">
+            
+                <a href="compatibility_consideration.html">
+            
+                    
+                    Compatibility Consideration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="call_for_action.html">
+            
+                <a href="call_for_action.html">
+            
+                    
+                    Call for action
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="future_work.html">
+            
+                <a href="future_work.html">
+            
+                    
+                    Future work
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../summary/">
+            
+                <a href="../summary/">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../summary/policy_control.html">
+            
+                <a href="../summary/policy_control.html">
+            
+                    
+                    Policy Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../references/">
+            
+                <a href="../references/">
+            
+                    
+                    References
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+	
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Heap Management in EDKII</a>
+    </h1>
+</div>
+<div>
+    <!-- 
+    <img style="float:left; align:middle; height:2em" src="media/TianocoreTitlePageLogo.jpg"/>
+     -->
+    
+      <h2>
+        <div style="position:absolute;text-align:left">Security Enhancement to Mitigate Buffer Overflow in UEFI</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT </div>
+        <div style="text-align:right">Revision 02.0</div>
+      </h2>  
+    
+    <hr>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <!--- @file
+  Additional Overflow Detection file: -Heap Management in EDK II
+
+  Copyright (c) 2018, Intel Corporation. All rights reserved.<BR>
+
+  Redistribution and use in source (original document form) and 'compiled'
+  forms (converted to PDF, epub, HTML and other formats) with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1) Redistributions of source code (original document form) must retain the
+     above copyright notice, this list of conditions and the following
+     disclaimer as the first lines of this file unmodified.
+
+  2) Redistributions in compiled form (transformed to other DTDs, converted to
+     PDF, epub, HTML and other formats) must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+
+  THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT "AS IS" AND ANY EXPRESS OR
+  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+  EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
+  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<h2 id="heap-management-in-edkii">Heap Management in EDK II </h2>
+<p>In UEFI, the <code>DxeCore</code> maintains the heap usage. The UEFI driver or application may call <code>AllocatePages/FreePages/AllocatePool/FreePool</code> to allocate or free the resource, or call <code>GetMemoryMap()</code> to review all of the memory usage.</p>
+<h3 id="heap-initialization">[Heap Initialization]</h3>
+<p>When <code>DxeIpl</code> transfers control to the <code>DxeCore</code>, all of the resource information is reported in a Hand-off-Block (HOB) [<a href="http://www.uefi.org/sites/default/files/resources/PI%201.5.zip" target="_blank">PI</a>]<sup><a href="#footnote1">[1]</a></sup> list. The <code>DxeCore</code> constructs the heap based upon the HOB information. See figure 4-2 Heap Initialization.</p>
+<ol>
+<li><p>The <code>DxeCore</code> needs to find one region to serve as the initial memory in <strong>CoreInitializeMemoryServices()</strong><a href="https://github.com/tianocore/edk2/blob/master/MdeModulePkg/Core/Dxe/Gcd/Gcd.c" target="_blank">https://github.com/tianocore/edk2/blob/master/MdeModulePkg/Core/Dxe/Gcd/Gcd.c</a>). The function is responsible for priming the memory map so that memory allocations and resource allocations can be made. If the memory region described by the Phase Handoff Information Table (PHIT) HOB is big enough to hold BIN and minimum initial memory, this memory region is used as highest priority. It can make the memory BIN allocation to be at the same memory region with PHIT that has better compatibility to avoid memory fragmentation. Usually the BIN size is already considered by platform Pre-EFI  Initialization Module (PEIM) when the platform PEIM calls <code>InstallPeiMemory()</code> to PEI core.</p>
+</li>
+<li><p>Then the <code>DxeCore</code> allocates runtime memory for EFI system table and runtime services table. It triggers BIN initialization in <code>CoreAddMemoryDescriptor()</code> (<a href="https://github.com/tianocore/edk2/blob/master/MdeModulePkg/Core/Dxe/Mem/Page.c" target="_blank">https://github.com/tianocore/edk2/blob/master/MdeModulePkg/Core/Dxe/Mem/Page.c</a>), when <code>mMemoryTypeInformationInitialized</code> is FALSE. The memory type information HOB is consumed to pre-allocate memory region for each memory type defined in this HOB. [<a href="https://github.com/tianocore-docs/Docs/raw/master/White_Papers/A_Tour_Beyond_BIOS_Memory_Map_And_Practices_in_UEFI_BIOS_V2.pdf" target="_blank">MemMap</a>] described the purpose and usage of the BIN.</p>
+</li>
+<li><p>Other small DXE service allocation also happed in this region, before full memory is ready. For example, <code>CoreInitializeImageServices()</code> installs <code>EFI_LOADED_IMAGE_PROTOCOL</code> for <code>DxeCore</code>, so that we can have an Image Handle for <code>DxeCore</code>, which will be used for Global Coherency Domain (GCD).</p>
+</li>
+<li><p>Now <code>DxeCore</code> <strong><code>CoreInitializeGcdServices()</code></strong> (<a href="https://github.com/tianocore/edk2/blob/master/MdeModulePkg/Core/Dxe/Gcd/Gcd.c" target="_blank">https://github.com/tianocore/edk2/blob/master/MdeModulePkg/Core/Dxe/Gcd/Gcd.c</a>) needs figure out all memory and IO resources, add them to <code>mGcdMemorySpaceMap</code> and <code>mGcdIoSpaceMap</code>. The tested memory is marked as <strong><code>EfiGcdMemoryTypeSystemMemory</code></strong> or <strong><code>EfiGcdMemoryTypeMoreReliable</code>.</strong> The other memory is marked to be <strong><code>EfiGcdMemoryTypeReserved</code></strong> or <strong><code>EfiGcdMemoryTypePersistentMemory</code></strong>. After the GCD memory map is constructed, the <code>DxeCore</code> calls <code>CoreAddMemoryDescriptor()</code> to add all <strong><code>EfiGcdMemoryTypeSystemMemory</code></strong> and <strong><code>EfiGcdMemoryTypeMoreReliable</code></strong>. Now all available memory is ready for use.</p>
+</li>
+<li><p>The last step in <code>CoreInitializeGcdServices()</code> is to relocate the HOB List to an allocated pool buffer. The relocation should be at after all the tested memory resources are added because the memory resource found in <code>CoreInitializeMemoryServices() m</code>ay have not enough remaining resource for the HOB List.</p>
+</li>
+</ol>
+<p>Now the <code>DxeCore</code> heap initialization is done. The rest of <code>DxeCore</code> and any drivers may use the UEFI services <code>AllocatePages/AllocatePool</code> to allocate a chunk of memory. The <code>DxeCore</code> uses the below priority in <code>FindFreePages()</code> to find a free memory location.</p>
+<pre><code>*   If the memory type matches the one described in the memory type information, the memory in BIN is used as first priority.
+
+*   If the memory type is not in memory type information, or there is no enough memory in the pre-allocated BIN, the DxeCore looks for the free memory with top-down algorithm.
+
+*   If there is not enough memory, the DxeCore does a special **&#x201C;memory promotion&#x201D;**. `PromoteMemoryResource()`([https://github.com/tianocore/edk2/blob/master/MdeModulePkg/Core/Dxe/Mem/Page.c](https://github.com/tianocore/edk2/blob/master/MdeModulePkg/Core/Dxe/Mem/Page.c)) is called to add UNTESTED memory region to be system memory. Then `FindFreePages()` tries to find some free memory again.
+
+    In the late DXE/BDS phase, there might be a memory test driver, such as [https://github.com/tianocore/edk2/tree/master/MdeModulePkg/Universal/MemoryTest](https://github.com/tianocore/edk2/tree/master/MdeModulePkg/Universal/MemoryTest), to test all untested memory and add them to the memory map. After this point all the memory is added to UEFI memory map.
+</code></pre><p><img src="../media/image12.png" alt=""></p>
+<h6 id="figure-4-2-heap-initialization">Figure 4-2 Heap Initialization</h6>
+<h3 id="page-management">[Page Management]</h3>
+<p>After the heap is initialized, the <code>DxeCore</code> maintains a list of memory map entries. See figure 4-3 Page management. This is a linked list with the memory addresses in ascending order. It contains memory address, length, type and attribute at the page level. When the UEFI service <code>GetMemoryMap()</code> is called, the contents of this linked list are returned, together with other Memory Mapped I/O (MMIO) with <code>EFI_MEMORY_RUNTIME</code> attribute and the reserved memory in the GCD resource list.</p>
+<p><img src="../media/image13.png" alt=""></p>
+<h6 id="figure-4-3-page-management">Figure 4-3 Page Management</h6>
+<p>When <code>gBS-&amp;gt;AllocatePages()</code> is called, <code>CoreInternalAllocatePages()</code> calls <code>FindFreePages()</code> to find out which address can be allocated. The <code>gMemoryMap</code> linked list is traversed in <code>CoreFindFreePagesI()</code>(<a href="https://github.com/tianocore/edk2/blob/master/MdeModulePkg/Core/Dxe/Mem/Page.c" target="_blank">https://github.com/tianocore/edk2/blob/master/MdeModulePkg/Core/Dxe/Mem/Page.c</a>). If the <code>Type</code> of an entry is <code>EfiConventionalMemory</code>, and the <code>Length</code> field of the entry is larger than the requested length, and the Start field of the entry is the highest, then the target allocated address is found in this entry. At this point <code>CoreInternalAllocatePages()</code>calls <code>CoreConvertPages()</code> to update this memory map linked list entry.</p>
+<p>The original entry which contains the target allocated address will be separated (or CLIP operation will occur) into 2 or more entries because the memory type is now different.</p>
+<p><img src="../media/image14.png" alt=""></p>
+<h6 id="figure-4-41-page-management-&#x2013;-clip-step-1">Figure 4-4.1 Page Management &#x2013; Clip: Step 1</h6>
+<p>Besides the <code>gMemoryMap</code> linked list, there are 2 data structures involved in the CLIP. <code>mMapStack</code> contains 6 MEMORY_MAP entries as a global variable. mFreeMemoryMapEntryList maintains a list of unused MEMORY_MAP entries. The details of the &#x201C;<strong>CLIP</strong>&#x201D; process is shown at figure 4-4.1 ~ 4-4.5.</p>
+<p><strong>Step 1:</strong> The <code>CoreConvertPagesEx()</code> discovers which memory map entry (the GREEN one) contain the target allocated address.</p>
+<p><img src="../media/image15.png" alt=""></p>
+<h6 id="figure-4-42-page-management-&#x2013;-clip-step-2">Figure 4-4.2 Page Management &#x2013; Clip: Step 2</h6>
+<p><strong>Step 2:</strong> The content of this target MEMORY_MAP entry is updated to contain the part of reset memory after allocation. If the allocated memory is in the middle of the entry, one entry (the YELLOW one) in <code>mMapStack</code> is popped and added to the memory map linked list. This entry covers the rest of memory. This new MEMORY_MAP entry must be from mMapStack because we are not able to <em>allocate</em> memory again in the <em>allocate</em> process. We cannot get an entry from <code>mFreeMemoryMap</code>, because this linked list might be empty at that time.</p>
+<p><img src="../media/image16.png" alt=""></p>
+<h6 id="figure-4-43-page-management-&#x2013;-clip-step-3"># Figure 4-4.3 Page Management &#x2013; Clip: Step 3</h6>
+<p><strong>Step 3:</strong> <code>CoreConvertPagesEx()</code> calls <code>CoreAddRange()</code> to add the new MEMORY_MAP entry to the memory map linked list. This new entry contains the allocated memory information. For the same reason listed earlier, this entry is also from mMapStack.</p>
+<p><img src="../media/image17.png" alt=""></p>
+<h6 id="figure-4-44-page-management-&#x2013;-clip-step-4">Figure 4-4.4 Page Management &#x2013; Clip: Step 4</h6>
+<p><strong>Step 4:</strong> Last but not of least importance, <code>CoreConvertPagesEx()</code> calls <code>CoreFreeMemoryMapStack()</code> to move the MEMORY_MAP entry from mMapStack to pool. <code>CoreFreeMemoryMapStack()</code>calls <code>AllocateMemoryMapEntry()</code> to dequeue a MEMORY_MAP entry (the RED one) from <code>mFreeMemoryMapEntryList</code>. It copies the content to the new entry and finds the correct insertion location with ascending order. The memory allocation may occur in <code>AllocateMemoryMapEntry()</code> if the <code>mFreeMemoryMapEntryList</code> is empty.</p>
+<p><img src="../media/image18.png" alt=""></p>
+<p>Figure 4-4.5 Page Management &#x2013; Clip: Step 5</p>
+<p><strong>Step 5:</strong> Finally, after all entries from <code>mMapStack</code> are moved to pool, the memory map linked list CLIP is finished. The <code>mMapStack</code> is kept unchanged. The <code>mFreeMemoryMapEntry</code> is updated.</p>
+<p>Later, when <code>FreePages()</code> happens, 2 or more MEMORY_MAP entries can be merged into one. The unused MEMORY_MAP entries are returned to <code>mFreeMemoryMapEntryList</code>. Those entries can be used in a subsequent <code>AllocatePages()</code>.</p>
+<h3 id="pool-management">[Pool Management]</h3>
+<p>Besides page management, <code>DxeCore</code> maintains the pool. A typical UEFI driver or application calls <code>gBS-&amp;gt;AllocatePool()</code> for memory allocation.</p>
+<p><code>DxeCore</code> assigns one <code>mPoolHead</code> for each UEFI specification defined memory type (<a href="https://github.com/tianocore/edk2/blob/master/MdeModulePkg/Core/Dxe/Mem/Pool.c" target="_blank">https://github.com/tianocore/edk2/blob/master/MdeModulePkg/Core/Dxe/Mem/Pool.c</a>). Each <code>mPoolHead</code> includes a set of FreeList. Each FreeList is a linked list for the fixed size free pool. The size of each FreeList is defined in <code>mPoolSizeTable</code>. It is a Fibonacci sequence, which allows us to migrate blocks between bins by splitting them up, while not wasting too much memory. See figure 4-5 Pool Management.</p>
+<p><img src="../media/image19.png" alt=""></p>
+<h6 id="figure-4-5-pool-management">Figure 4-5 Pool Management</h6>
+<p>When <code>gBS-&amp;gt;AllocatePool()</code> is called, <code>CoreInternalAllocatePool()</code> calls <code>CoreAllocatePoolI ()</code> to find out which FreeList should be used. If the requested pool size is too big to fit in all FreeList, a PoolPage is allocated and returned directly. The FreeList is untouched.</p>
+<p>If the requested pool size matches one of the FreeList, one entry in this FreeList is dequeued and returned as the free memory.</p>
+<p>If the matched FreeList is empty, <code>CoreAllocatePoolI()</code> checks the bins holding larger blocks, and will <strong>CARVE</strong> one. The detail &#x201C;<strong>CARVE</strong>&#x201D; process is shown at figure 4-6.1 ~ 4-6.2.</p>
+<p><img src="../media/image20.png" alt=""></p>
+<h6 id="figure-4-61-pool-management-&#x2013;-carve-step-1">Figure 4-6.1 Pool Management &#x2013; Carve: Step 1</h6>
+<p><strong>Step 1:</strong> If the matched FreeList is empty (such as <code>FreeList[2]</code>), <code>CoreAllocatePoolI()</code> increments the Index of FreeList one by one and checks if the next FreeList is empty. If there is one FreeList that is not empty (such as <code>FreeList[3]</code>), one POOL_FREE entry in this linked list is dequeued (the GREEN one) and goes to the CARVE process.</p>
+<p>If there is no available entry in all FreeList, <code>CoreAllocatePoolI()</code> calls <code>CoreAllocatePoolPages()</code> to allocate new pages as the candidate and goes to the CARVE process.</p>
+<p><img src="../media/image21.png" alt=""></p>
+<h6 id="figure-4-62-pool-management-&#x2013;-carve-step-2">Figure 4-6.2 Pool Management &#x2013; Carve: Step 2</h6>
+<p><strong>Step 2:</strong> Since the size of this POOL_FREE candidate entry is bigger than the one requested, <code>CoreAllocatePoolI()</code> records the requested entry (the RED one) and splits up the remaining space (the GREEN one) into free pool blocks (such as <code>FreeList[1]</code>). The head of the request entry is changed from POOL_FREE to POOL_HEAD to record the pool information, such as size and type.</p>
+<p>Later, when <code>FreePool()</code> is called, the information in POOL_HEAD can be used to discover into which FreeList it should be returned. If the pool size is too big to fit in all FreeList, it is a PoolPage and freed by <code>CoreFreePoolPages()</code>. Alternately, this POOL_HEAD is converted to POOL_FREE and is inserted into one of the proper FreeList. <code>CoreFreePoolI()</code> also makes an additional check to see if all the pool entries in the same page as Free are freed pool entries. If so, all of these pool entries are removed from the free loop lists, and <code>CoreFreePoolPages()</code> is called to free the entire pages.</p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><hr>
+<a name="footnote1">[1]</a>[<a href="http://www.uefi.org/sites/default/files/resources/PI%201.5.zip" target="_blank">PI</a>] UEFI Platform Initialization Specification, Version 1.5 </p>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                    
+                    
+
+<div>
+    <hr>
+    
+      <h2>
+        <div style="position:absolute;text-align:left">Security Enhancement to Mitigate Buffer Overflow in UEFI</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT </div>
+        <div style="text-align:right">Revision 02.0</div>
+      </h2>  
+    
+</div>
+
+
+
+                
+            </div>
+
+            
+                
+                <a href="stack_overflow_detection.html" class="navigation navigation-prev " aria-label="Previous page: Stack Overflow Detection">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="heap_overflow_detection_for_page.html" class="navigation navigation-next " aria-label="Next page: Heap Overflow Detection (for Page)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Heap Management in EDKII","level":"1.5.2","depth":2,"next":{"title":"Heap Overflow Detection (for Page)","level":"1.5.3","depth":2,"path":"additional_overflow_detection/heap_overflow_detection_for_page.md","ref":"additional_overflow_detection/heap_overflow_detection_for_page.md","articles":[]},"previous":{"title":"Stack Overflow Detection","level":"1.5.1","depth":2,"path":"additional_overflow_detection/stack_overflow_detection.md","ref":"additional_overflow_detection/stack_overflow_detection.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"Security Enhancement to Mitigate Buffer Overflow in UEFI","version":"Revision 02.0"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"additional_overflow_detection/heap_management_in_edkii.md","mtime":"2020-12-01T07:02:04.432Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-01T07:02:33.925Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,922 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Policy Control · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../references/" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    A Tour Beyond BIOS - Security Enhancement to Mitigate Buffer Overflow in UEFI
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../executive-summary.html">
+            
+                <a href="../executive-summary.html">
+            
+                    
+                    Executive Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../stack_canaries/">
+            
+                <a href="../stack_canaries/">
+            
+                    
+                    Stack Canaries
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../stack_canaries/stack_check_support_in_microsoft_visual_studio.html">
+            
+                <a href="../stack_canaries/stack_check_support_in_microsoft_visual_studio.html">
+            
+                    
+                    Stack Check Support in Microsoft Visual Studio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../stack_canaries/stack_check_support_in_gcc.html">
+            
+                <a href="../stack_canaries/stack_check_support_in_gcc.html">
+            
+                    
+                    Stack Check Support in GCC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../stack_canaries/enable_stack_check_in_edkii.html">
+            
+                <a href="../stack_canaries/enable_stack_check_in_edkii.html">
+            
+                    
+                    Enable Stack Check in EDK II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../stack_canaries/future_work.html">
+            
+                <a href="../stack_canaries/future_work.html">
+            
+                    
+                    Future work
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../data_execution_protection/">
+            
+                <a href="../data_execution_protection/">
+            
+                    
+                    Data Execution Protection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../data_execution_protection/dep_in_x86_processor.html">
+            
+                <a href="../data_execution_protection/dep_in_x86_processor.html">
+            
+                    
+                    DEP in X86 Processor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../data_execution_protection/dep_in_uefi_specification.html">
+            
+                <a href="../data_execution_protection/dep_in_uefi_specification.html">
+            
+                    
+                    DEP in UEFI specification
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../data_execution_protection/enable_dep_in_edkii.html">
+            
+                <a href="../data_execution_protection/enable_dep_in_edkii.html">
+            
+                    
+                    Enable DEP in EDK II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../data_execution_protection/future_work.html">
+            
+                <a href="../data_execution_protection/future_work.html">
+            
+                    
+                    Future work
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../address_space_layout_randomization/">
+            
+                <a href="../address_space_layout_randomization/">
+            
+                    
+                    Address Space Layout Randomization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../address_space_layout_randomization/aslr_in_windows.html">
+            
+                <a href="../address_space_layout_randomization/aslr_in_windows.html">
+            
+                    
+                    ASLR in Windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../address_space_layout_randomization/aslr_in_nix.html">
+            
+                <a href="../address_space_layout_randomization/aslr_in_nix.html">
+            
+                    
+                    ASLR in *nix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../address_space_layout_randomization/aslr_requirement_in_uefi_firmware.html">
+            
+                <a href="../address_space_layout_randomization/aslr_requirement_in_uefi_firmware.html">
+            
+                    
+                    ASLR requirement in UEFI firmware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../address_space_layout_randomization/enable_aslr_for_uefi_in_edkii.html">
+            
+                <a href="../address_space_layout_randomization/enable_aslr_for_uefi_in_edkii.html">
+            
+                    
+                    Enable ASLR for UEFI in EDK II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../address_space_layout_randomization/enable_aslr_for_smm_in_edkii.html">
+            
+                <a href="../address_space_layout_randomization/enable_aslr_for_smm_in_edkii.html">
+            
+                    
+                    Enable ASLR for SMM in EDK II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../address_space_layout_randomization/future_work.html">
+            
+                <a href="../address_space_layout_randomization/future_work.html">
+            
+                    
+                    Future work
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../additional_overflow_detection/">
+            
+                <a href="../additional_overflow_detection/">
+            
+                    
+                    Additional Overflow Detection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../additional_overflow_detection/stack_overflow_detection.html">
+            
+                <a href="../additional_overflow_detection/stack_overflow_detection.html">
+            
+                    
+                    Stack Overflow Detection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../additional_overflow_detection/heap_management_in_edkii.html">
+            
+                <a href="../additional_overflow_detection/heap_management_in_edkii.html">
+            
+                    
+                    Heap Management in EDKII
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../additional_overflow_detection/heap_overflow_detection_for_page.html">
+            
+                <a href="../additional_overflow_detection/heap_overflow_detection_for_page.html">
+            
+                    
+                    Heap Overflow Detection (for Page)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../additional_overflow_detection/heap_overflow_detection_for_pool.html">
+            
+                <a href="../additional_overflow_detection/heap_overflow_detection_for_pool.html">
+            
+                    
+                    Heap Overflow Detection (for Pool)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../additional_overflow_detection/null_pointer_protection_in_edkii.html">
+            
+                <a href="../additional_overflow_detection/null_pointer_protection_in_edkii.html">
+            
+                    
+                    NULL Pointer Protection in EDK II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../additional_overflow_detection/read-only_page_table.html">
+            
+                <a href="../additional_overflow_detection/read-only_page_table.html">
+            
+                    
+                    Read-only page table
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../additional_overflow_detection/limitation.html">
+            
+                <a href="../additional_overflow_detection/limitation.html">
+            
+                    
+                    Limitation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../additional_overflow_detection/compatibility_consideration.html">
+            
+                <a href="../additional_overflow_detection/compatibility_consideration.html">
+            
+                    
+                    Compatibility Consideration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../additional_overflow_detection/call_for_action.html">
+            
+                <a href="../additional_overflow_detection/call_for_action.html">
+            
+                    
+                    Call for action
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../additional_overflow_detection/future_work.html">
+            
+                <a href="../additional_overflow_detection/future_work.html">
+            
+                    
+                    Future work
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.6.1" data-path="policy_control.html">
+            
+                <a href="policy_control.html">
+            
+                    
+                    Policy Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../references/">
+            
+                <a href="../references/">
+            
+                    
+                    References
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+	
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Policy Control</a>
+    </h1>
+</div>
+<div>
+    <!-- 
+    <img style="float:left; align:middle; height:2em" src="media/TianocoreTitlePageLogo.jpg"/>
+     -->
+    
+      <h2>
+        <div style="position:absolute;text-align:left">Security Enhancement to Mitigate Buffer Overflow in UEFI</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT </div>
+        <div style="text-align:right">Revision 02.0</div>
+      </h2>  
+    
+    <hr>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <!--- @file
+  Summary File: - Policy Control
+
+  Copyright (c) 2018, Intel Corporation. All rights reserved.<BR>
+
+  Redistribution and use in source (original document form) and 'compiled'
+  forms (converted to PDF, epub, HTML and other formats) with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1) Redistributions of source code (original document form) must retain the
+     above copyright notice, this list of conditions and the following
+     disclaimer as the first lines of this file unmodified.
+
+  2) Redistributions in compiled form (transformed to other DTDs, converted to
+     PDF, epub, HTML and other formats) must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+
+  THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT "AS IS" AND ANY EXPRESS OR
+  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+  EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
+  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<h2 id="policy-control">Policy Control </h2>
+<h3 id="stack-guard-detect-stack-overflow">Stack Guard: <em>Detect Stack Overflow</em> </h3>
+<pre><code>gEfiMdeModulePkgTokenSpaceGuid.PcdCpuStackGuard
+  ## Indicates if UEFI Stack Guard will be enabled.
+  #  If enabled, stack overflow in UEFI can be caught, preventing chaotic consequences.&lt;BR&gt;&lt;BR&gt;
+  #   TRUE  - UEFI Stack Guard will be enabled.&lt;BR&gt;
+  #   FALSE - UEFI Stack Guard will be disabled.&lt;BR&gt;
+
+gUefiCpuPkgTokenSpaceGuid.PcdCpuSmmStackGuard
+  ## Indicates if SMM Stack Guard will be enabled.
+  #  If enabled, stack overflow in SMM can be caught, preventing chaotic consequences.&lt;BR&gt;&lt;BR&gt;
+  #   TRUE  - SMM Stack Guard will be enabled.&lt;BR&gt;
+  #   FALSE - SMM Stack Guard will be disabled.&lt;BR&gt;
+</code></pre><h3 id="null-pointer-detection-detect-null-pointer-access">NULL pointer detection: <em>Detect NULL pointer access</em> </h3>
+<pre><code>gEfiMdeModulePkgTokenSpaceGuid.PcdNullPointerDetectionPropertyMask
+  ## Mask to control the NULL address detection in code for different phases.
+  #  If enabled, accessing NULL address in UEFI or SMM code can be caught.&lt;BR&gt;&lt;BR&gt;
+  #    BIT0    - Enable NULL pointer detection for UEFI.&lt;BR&gt;
+  #    BIT1    - Enable NULL pointer detection for SMM.&lt;BR&gt;
+  #    BIT2..6 - Reserved for future uses.&lt;BR&gt;
+  #    BIT7    - Disable NULL pointer detection just after EndOfDxe. &lt;BR&gt;
+  #              This is a workaround for those unsolvable NULL access issues in
+  #              OptionROM, boot loader, etc. It can also help to avoid unnecessary
+  #              exception caused by legacy memory (0-4095) access after EndOfDxe,
+  #              such as Windows 7 boot on Qemu.&lt;BR&gt;
+</code></pre><h3 id="heap-guard-detect-heap-overflow">Heap Guard: <em>Detect Heap Overflow.</em> </h3>
+<pre><code>gEfiMdeModulePkgTokenSpaceGuid.PcdHeapGuardPageType
+  ## Indicates which type allocation need guard page.
+  #
+  # If a bit is set, a head guard page and a tail guard page will be added just
+  # before and after corresponding type of pages allocated if there&apos;s enough
+  # free pages for all of them. The page allocation for the type related to
+  # cleared bits keeps the same as ususal.
+  #
+  # Below is bit mask for this PCD: (Order is same as UEFI spec)&lt;BR&gt;
+  #  EfiReservedMemoryType             0x0000000000000001&lt;BR&gt;
+  #  EfiLoaderCode                     0x0000000000000002&lt;BR&gt;
+  #  EfiLoaderData                     0x0000000000000004&lt;BR&gt;
+  #  EfiBootServicesCode               0x0000000000000008&lt;BR&gt;
+  #  EfiBootServicesData               0x0000000000000010&lt;BR&gt;
+  #  EfiRuntimeServicesCode            0x0000000000000020&lt;BR&gt;
+  #  EfiRuntimeServicesData            0x0000000000000040&lt;BR&gt;
+  #  EfiConventionalMemory             0x0000000000000080&lt;BR&gt;
+  #  EfiUnusableMemory                 0x0000000000000100&lt;BR&gt;
+  #  EfiACPIReclaimMemory              0x0000000000000200&lt;BR&gt;
+  #  EfiACPIMemoryNVS                  0x0000000000000400&lt;BR&gt;
+  #  EfiMemoryMappedIO                 0x0000000000000800&lt;BR&gt;
+  #  EfiMemoryMappedIOPortSpace        0x0000000000001000&lt;BR&gt;
+  #  EfiPalCode                        0x0000000000002000&lt;BR&gt;
+  #  EfiPersistentMemory               0x0000000000004000&lt;BR&gt;
+  #  OEM Reserved                      0x4000000000000000&lt;BR&gt;
+  #  OS Reserved                       0x8000000000000000&lt;BR&gt;
+  # e.g. LoaderCode+LoaderData+BootServicesCode+BootServicesData are needed, 0x1E should be used.&lt;BR&gt;
+</code></pre><pre><code>gEfiMdeModulePkgTokenSpaceGuid.PcdHeapGuardPoolType
+  ## Indicates which type allocation need guard page.
+  #
+  # If a bit is set, a head guard page and a tail guard page will be added just
+  # before and after corresponding type of pages which the allocated pool occupies,
+  # if there&apos;s enough free memory for all of them. The pool allocation for the
+  # type related to cleared bits keeps the same as ususal.
+  #
+  # Below is bit mask for this PCD: (Order is same as UEFI spec)&lt;BR&gt;
+  #  EfiReservedMemoryType             0x0000000000000001&lt;BR&gt;
+  #  EfiLoaderCode                     0x0000000000000002&lt;BR&gt;
+  #  EfiLoaderData                     0x0000000000000004&lt;BR&gt;
+  #  EfiBootServicesCode               0x0000000000000008&lt;BR&gt;
+  #  EfiBootServicesData               0x0000000000000010&lt;BR&gt;
+  #  EfiRuntimeServicesCode            0x0000000000000020&lt;BR&gt;
+  #  EfiRuntimeServicesData            0x0000000000000040&lt;BR&gt;
+  #  EfiConventionalMemory             0x0000000000000080&lt;BR&gt;
+  #  EfiUnusableMemory                 0x0000000000000100&lt;BR&gt;
+  #  EfiACPIReclaimMemory              0x0000000000000200&lt;BR&gt;
+  #  EfiACPIMemoryNVS                  0x0000000000000400&lt;BR&gt;
+  #  EfiMemoryMappedIO                 0x0000000000000800&lt;BR&gt;
+  #  EfiMemoryMappedIOPortSpace        0x0000000000001000&lt;BR&gt;
+  #  EfiPalCode                        0x0000000000002000&lt;BR&gt;
+  #  EfiPersistentMemory               0x0000000000004000&lt;BR&gt;
+  #  OEM Reserved                      0x4000000000000000&lt;BR&gt;
+  #  OS Reserved                       0x8000000000000000&lt;BR&gt;
+  # e.g. LoaderCode+LoaderData+BootServicesCode+BootServicesData are needed, 0x1E should be used.&lt;BR&gt;
+
+gEfiMdeModulePkgTokenSpaceGuid.PcdHeapGuardPropertyMask
+  ## This mask is to control Heap Guard behavior.
+  # Note that due to the limit of pool memory implementation and the alignment
+  # requirement of UEFI spec, BIT7 is a try-best setting which cannot guarantee
+  # that the returned pool is exactly adjacent to head guard page or tail guard
+  # page.
+  #   BIT0 - Enable UEFI page guard.&lt;BR&gt;
+  #   BIT1 - Enable UEFI pool guard.&lt;BR&gt;
+  #   BIT2 - Enable SMM page guard.&lt;BR&gt;
+  #   BIT3 - Enable SMM pool guard.&lt;BR&gt;
+  #   BIT7 - The direction of Guard Page for Pool Guard.
+  #          0 - The returned pool is near the tail guard page.&lt;BR&gt;
+  #          1 - The returned pool is near the head guard page.&lt;BR&gt;
+</code></pre><h3 id="memory-profile-provide-memory-usage-information-detect-memory-leak">Memory Profile: <em>Provide memory usage information, detect memory leak</em> </h3>
+<pre><code>gEfiMdeModulePkgTokenSpaceGuid.PcdMemoryProfilePropertyMask
+  ## The mask is used to control memory profile behavior.&lt;BR&gt;&lt;BR&gt;
+  #  BIT0 - Enable UEFI memory profile.&lt;BR&gt;
+  #  BIT1 - Enable SMRAM profile.&lt;BR&gt;
+  #  BIT7 - Disable recording at the start.&lt;BR&gt;
+
+gEfiMdeModulePkgTokenSpaceGuid.PcdMemoryProfileMemoryType
+  ## This flag is to control which memory types of alloc info will be recorded by DxeCore &amp; SmmCore.&lt;BR&gt;&lt;BR&gt;
+  # For SmmCore, only EfiRuntimeServicesCode and EfiRuntimeServicesData are valid.&lt;BR&gt;
+  #
+  # Below is bit mask for this PCD: (Order is same as UEFI spec)&lt;BR&gt;
+  #  EfiReservedMemoryType          0x0001&lt;BR&gt;
+  #  EfiLoaderCode                  0x0002&lt;BR&gt;
+  #  EfiLoaderData                  0x0004&lt;BR&gt;
+  #  EfiBootServicesCode            0x0008&lt;BR&gt;
+  #  EfiBootServicesData            0x0010&lt;BR&gt;
+  #  EfiRuntimeServicesCode         0x0020&lt;BR&gt;
+  #  EfiRuntimeServicesData         0x0040&lt;BR&gt;
+  #  EfiConventionalMemory          0x0080&lt;BR&gt;
+  #  EfiUnusableMemory              0x0100&lt;BR&gt;
+  #  EfiACPIReclaimMemory           0x0200&lt;BR&gt;
+  #  EfiACPIMemoryNVS               0x0400&lt;BR&gt;
+  #  EfiMemoryMappedIO              0x0800&lt;BR&gt;
+  #  EfiMemoryMappedIOPortSpace     0x1000&lt;BR&gt;
+  #  EfiPalCode                     0x2000&lt;BR&gt;
+  #  EfiPersistentMemory            0x4000&lt;BR&gt;
+  #  OEM Reserved       0x4000000000000000&lt;BR&gt;
+  #  OS Reserved        0x8000000000000000&lt;BR&gt;
+  #
+  # e.g. Reserved+ACPINvs+ACPIReclaim+RuntimeCode+RuntimeData are needed, 0x661 should be used.&lt;BR&gt;
+
+gEfiMdeModulePkgTokenSpaceGuid.PcdMemoryProfileDriverPath
+  ## This PCD is to control which drivers need memory profile data.&lt;BR&gt;&lt;BR&gt;
+  # For example:&lt;BR&gt;
+  # One image only (Shell):&lt;BR&gt;
+  #     Header                    GUID&lt;BR&gt;
+  #     {0x04, 0x06, 0x14, 0x00,  0x83, 0xA5, 0x04, 0x7C, 0x3E, 0x9E, 0x1C, 0x4F, 0xAD, 0x65, 0xE0, 0x52, 0x68, 0xD0, 0xB4, 0xD1,&lt;BR&gt;
+  #      0x7F, 0xFF, 0x04, 0x00}&lt;BR&gt;
+  # Two or more images (Shell + WinNtSimpleFileSystem):&lt;BR&gt;
+  #     {0x04, 0x06, 0x14, 0x00,  0x83, 0xA5, 0x04, 0x7C, 0x3E, 0x9E, 0x1C, 0x4F, 0xAD, 0x65, 0xE0, 0x52, 0x68, 0xD0, 0xB4, 0xD1,&lt;BR&gt;
+  #      0x7F, 0x01, 0x04, 0x00,&lt;BR&gt;
+  #      0x04, 0x06, 0x14, 0x00,  0x8B, 0xE1, 0x25, 0x9C, 0xBA, 0x76, 0xDA, 0x43, 0xA1, 0x32, 0xDB, 0xB0, 0x99, 0x7C, 0xEF, 0xEF,&lt;BR&gt;
+  #      0x7F, 0xFF, 0x04, 0x00}&lt;BR&gt;
+</code></pre><h3 id="nx-stack-prevent-code-execution-in-stack">NX stack: <em>Prevent code execution in stack</em> </h3>
+<pre><code>gEfiMdeModulePkgTokenSpaceGuid.PcdSetNxForStack
+  ## Indicates if to set NX for stack.&lt;BR&gt;&lt;BR&gt;
+  #  For the DxeIpl and the DxeCore are both X64, set NX for stack feature also require PcdDxeIplBuildPageTables be TRUE.&lt;BR&gt;
+  #  For the DxeIpl and the DxeCore are both IA32 (PcdDxeIplSwitchToLongMode is FALSE), set NX for stack feature also require
+  #  IA32 PAE is supported and Execute Disable Bit is available.&lt;BR&gt;
+  #   TRUE  - to set NX for stack.&lt;BR&gt;
+  #   FALSE - Not to set NX for stack.&lt;BR&gt;
+</code></pre><h3 id="dxe-nx-ro-protection-prevent-code-injection">DXE NX/RO Protection: <em>Prevent code injection</em> </h3>
+<pre><code>gEfiMdeModulePkgTokenSpaceGuid.PcdDxeNxMemoryProtectionPolicy
+  ## Set DXE memory protection policy. The policy is bitwise.
+  #  If a bit is set, memory regions of the associated type will be mapped
+  #  non-executable.&lt;BR&gt;&lt;BR&gt;
+  #
+  # Below is bit mask for this PCD: (Order is same as UEFI spec)&lt;BR&gt;
+  #  EfiReservedMemoryType          0x0001&lt;BR&gt;
+  #  EfiLoaderCode                  0x0002&lt;BR&gt;
+  #  EfiLoaderData                  0x0004&lt;BR&gt;
+  #  EfiBootServicesCode            0x0008&lt;BR&gt;
+  #  EfiBootServicesData            0x0010&lt;BR&gt;
+  #  EfiRuntimeServicesCode         0x0020&lt;BR&gt;
+  #  EfiRuntimeServicesData         0x0040&lt;BR&gt;
+  #  EfiConventionalMemory          0x0080&lt;BR&gt;
+  #  EfiUnusableMemory              0x0100&lt;BR&gt;
+  #  EfiACPIReclaimMemory           0x0200&lt;BR&gt;
+  #  EfiACPIMemoryNVS               0x0400&lt;BR&gt;
+  #  EfiMemoryMappedIO              0x0800&lt;BR&gt;
+  #  EfiMemoryMappedIOPortSpace     0x1000&lt;BR&gt;
+  #  EfiPalCode                     0x2000&lt;BR&gt;
+  #  EfiPersistentMemory            0x4000&lt;BR&gt;
+  #  OEM Reserved       0x4000000000000000&lt;BR&gt;
+  #  OS Reserved        0x8000000000000000&lt;BR&gt;
+  #
+  # NOTE: User must NOT set NX protection for EfiLoaderCode / EfiBootServicesCode / EfiRuntimeServicesCode. &lt;BR&gt;
+  #       User MUST set the same NX protection for EfiBootServicesData and EfiConventionalMemory. &lt;BR&gt;
+  #
+  # e.g. 0x7FD5 can be used for all memory except Code. &lt;BR&gt;
+  # e.g. 0x7BD4 can be used for all memory except Code and ACPINVS/Reserved. &lt;BR&gt;
+</code></pre><h3 id="dxe-image-protection-prevent-code-injection">DXE image Protection: <em>Prevent code injection</em> </h3>
+<pre><code>gEfiMdeModulePkgTokenSpaceGuid.PcdImageProtectionPolicy
+  ## Set image protection policy. The policy is bitwise.
+  #  If a bit is set, the image will be protected by DxeCore if it is aligned.
+  #   The code section becomes read-only, and the data section becomes non-executable.
+  #  If a bit is clear, the image will not be protected.&lt;BR&gt;&lt;BR&gt;
+  #    BIT0       - Image from unknown device. &lt;BR&gt;
+  #    BIT1       - Image from firmware volume.&lt;BR&gt;
+</code></pre><h3 id="smm-static-paging-provide-code-injection-in-smm">System Management Mode (SMM) static paging: <em>Provide code injection in SMM</em> </h3>
+<pre><code>
+gUefiCpuPkgTokenSpaceGuid.PcdCpuSmmStaticPageTable
+  ## Indicates if SMM uses static page table.
+  #  If enabled, SMM will not use on-demand paging. SMM will build static page table for all memory.
+  #  This flag only impacts X64 build, because SMM always builds static page table for IA32.
+  #  It could not be enabled at the same time with SMM profile feature (PcdCpuSmmProfileEnable).
+  #  It could not be enabled also at the same time with heap guard feature for SMM
+  #  (PcdHeapGuardPropertyMask in MdeModulePkg).&lt;BR&gt;&lt;BR&gt;
+  #   TRUE  - SMM uses static page table for all memory.&lt;BR&gt;
+  #   FALSE - SMM uses static page table for below 4G memory and use on-demand paging for above 4G memory.&lt;BR&gt;
+</code></pre><h3 id="smi-handler-profile-provide-smi-handler-information">System Management Mode Interrupt (SMI) Handler Profile: <em>Provide SMI handler information</em> </h3>
+<pre><code>gEfiMdeModulePkgTokenSpaceGuid.PcdSmiHandlerProfilePropertyMask
+  ## The mask is used to control SmiHandlerProfile behavior.&lt;BR&gt;&lt;BR&gt;
+  #  BIT0 - Enable SmiHandlerProfile.&lt;BR&gt;
+</code></pre><h3 id="smm-profile-provide-non-smram-access-in-smm">SMM Profile: <em>Provide non-SMRAM access in SMM</em> </h3>
+<pre><code>gUefiCpuPkgTokenSpaceGuid.PcdCpuSmmProfileEnable
+  ## Indicates if SMM Profile will be enabled.
+</code></pre>
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                    
+                    
+
+<div>
+    <hr>
+    
+      <h2>
+        <div style="position:absolute;text-align:left">Security Enhancement to Mitigate Buffer Overflow in UEFI</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT </div>
+        <div style="text-align:right">Revision 02.0</div>
+      </h2>  
+    
+</div>
+
+
+
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Summary">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../references/" class="navigation navigation-next " aria-label="Next page: References">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Policy Control","level":"1.6.1","depth":2,"next":{"title":"References","level":"1.7","depth":1,"path":"references/README.md","ref":"references/README.md","articles":[]},"previous":{"title":"Summary","level":"1.6","depth":1,"path":"summary/README.md","ref":"summary/README.md","articles":[{"title":"Policy Control","level":"1.6.1","depth":2,"path":"summary/policy_control.md","ref":"summary/policy_control.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"Security Enhancement to Mitigate Buffer Overflow in UEFI","version":"Revision 02.0"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"summary/policy_control.md","mtime":"2020-12-01T07:02:04.440Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-01T07:02:33.925Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
