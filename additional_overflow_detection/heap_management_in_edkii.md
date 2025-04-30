@@ -70,7 +70,7 @@ After the heap is initialized, the `DxeCore` maintains a list of memory map entr
 
 ###### Figure 4-3 Page Management
 
-When `gBS-&gt;AllocatePages()` is called, `CoreInternalAllocatePages()` calls `FindFreePages()` to find out which address can be allocated. The `gMemoryMap` linked list is traversed in `CoreFindFreePagesI()`([https://github.com/tianocore/edk2/blob/master/MdeModulePkg/Core/Dxe/Mem/Page.c](https://github.com/tianocore/edk2/blob/master/MdeModulePkg/Core/Dxe/Mem/Page.c)). If the `Type` of an entry is `EfiConventionalMemory`, and the `Length` field of the entry is larger than the requested length, and the Start field of the entry is the highest, then the target allocated address is found in this entry. At this point `CoreInternalAllocatePages() `calls `CoreConvertPages()` to update this memory map linked list entry.
+When `gBS->AllocatePages()` is called, `CoreInternalAllocatePages()` calls `FindFreePages()` to find out which address can be allocated. The `gMemoryMap` linked list is traversed in `CoreFindFreePagesI()`([https://github.com/tianocore/edk2/blob/master/MdeModulePkg/Core/Dxe/Mem/Page.c](https://github.com/tianocore/edk2/blob/master/MdeModulePkg/Core/Dxe/Mem/Page.c)). If the `Type` of an entry is `EfiConventionalMemory`, and the `Length` field of the entry is larger than the requested length, and the Start field of the entry is the highest, then the target allocated address is found in this entry. At this point `CoreInternalAllocatePages() `calls `CoreConvertPages()` to update this memory map linked list entry.
 
 The original entry which contains the target allocated address will be separated (or CLIP operation will occur) into 2 or more entries because the memory type is now different.
 
@@ -110,7 +110,7 @@ Later, when `FreePages()` happens, 2 or more MEMORY_MAP entries can be merged in
 
 ###[Pool Management]
 
-Besides page management, `DxeCore` maintains the pool. A typical UEFI driver or application calls `gBS-&gt;AllocatePool()` for memory allocation.
+Besides page management, `DxeCore` maintains the pool. A typical UEFI driver or application calls `gBS->AllocatePool()` for memory allocation.
 
 `DxeCore` assigns one `mPoolHead` for each UEFI specification defined memory type ([https://github.com/tianocore/edk2/blob/master/MdeModulePkg/Core/Dxe/Mem/Pool.c](https://github.com/tianocore/edk2/blob/master/MdeModulePkg/Core/Dxe/Mem/Pool.c)). Each `mPoolHead` includes a set of FreeList. Each FreeList is a linked list for the fixed size free pool. The size of each FreeList is defined in `mPoolSizeTable`. It is a Fibonacci sequence, which allows us to migrate blocks between bins by splitting them up, while not wasting too much memory. See figure 4-5 Pool Management.
 
@@ -118,7 +118,7 @@ Besides page management, `DxeCore` maintains the pool. A typical UEFI driver or 
 
 ###### Figure 4-5 Pool Management
 
-When `gBS-&gt;AllocatePool()` is called, `CoreInternalAllocatePool()` calls `CoreAllocatePoolI ()` to find out which FreeList should be used. If the requested pool size is too big to fit in all FreeList, a PoolPage is allocated and returned directly. The FreeList is untouched.
+When `gBS->AllocatePool()` is called, `CoreInternalAllocatePool()` calls `CoreAllocatePoolI ()` to find out which FreeList should be used. If the requested pool size is too big to fit in all FreeList, a PoolPage is allocated and returned directly. The FreeList is untouched.
 
 If the requested pool size matches one of the FreeList, one entry in this FreeList is dequeued and returned as the free memory.
 
